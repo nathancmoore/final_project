@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CA of Washington</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'castyles.css' %}">
+
+<!--     <nav class="navbar navbar-light bg-faded">
+      <form class="form-inline">
+        <button class="btn btn-outline-success" type="button">Main button</button>
+        <button class="btn btn-sm align-middle btn-outline-secondary" type="button">Smaller button</button>
+      </form>
+    </nav> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{% static 'calogo.gif' %}" class='logo'>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12" role="group" aria-label="Basic example">
+          <button class="btn btn-outline-success" type="button">Home</button>
+          <button class="btn btn-outline-success" type="button">About C.A.</button>
+          <button class="btn btn-outline-success" type="button">Steps &amp; Traditions</button>
+          <button class="btn btn-outline-success" type="button">Meeting Schedule</button>
+          <button class="btn btn-outline-success" type="button">Event Info &amp; Meeting Flyers</button>
+          <button class="btn btn-outline-success" type="button">Additional Resources</button>
+        </div>
+      </div>
+    </div>
+<!--     <div class="container">
+      <div class="row">
+        <div class="col-md-2"><button class="btn btn-outline-success canav" type="button">Home</button></div>
+        <div class="col-md-2"><button class="btn btn-outline-success canav" type="button">About C.A.</button></div>
+        <div class="col-md-2"><button class="btn btn-outline-success canav" type="button">Steps &amp; Traditions</button></div>
+        <div class="col-md-2"><button class="btn btn-outline-success canav" type="button">Meeting Schedule</button></div>
+        <div class="col-md-2"><button class="btn btn-outline-success canav" type="button">Event Info &amp; Meeting Flyers</button></div>
+        <div class="col-md-2"><button class="btn btn-outline-success canav" type="button">Additional Resources</button></div>
+      </div>
+    </div> -->
+
+    <script src="{% static 'popper.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+  </body>
+</html>
