@@ -101,4 +101,6 @@ ENV/
 .mypy_cache/
 
 ca_website/ansible/*
+!ca_website/ansible/templates
+ca_website/ansible/templates/*
 !ca_website/ansible/templates/nginx_config.jinja2
