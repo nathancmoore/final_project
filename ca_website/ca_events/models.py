@@ -52,7 +52,7 @@ class Meeting(models.Model):
 class ServiceMeeting(models.Model):
     """Service Meeting model for CA site."""
 
-    meeting_name = models.CharField(max_length=50)
+    meeting_name = models.CharField(max_length=100)
     meeting_day = models.CharField(max_length=100)
     start_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
@@ -62,7 +62,7 @@ class ServiceMeeting(models.Model):
     zip_code = models.IntegerField()
     room = models.CharField(max_length=100)
     notes = models.TextField()
-    last_updated = models.DateTimeField(auto_now=True)
+    last_updated = models.DateTimeField(auto_now_add=True, null=True)
 
 
 class Events(models.Model):
@@ -106,7 +106,7 @@ class Events(models.Model):
         choices=meeting_format_choices,
     )
     accessiblility = models.CharField(max_length=150)
-    last_updated = models.DateTimeField(auto_now=True)
+    last_updated = models.DateTimeField(auto_now_add=True, null=True)
 
 
 class ExternalResources(models.Model):
