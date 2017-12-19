@@ -50,3 +50,8 @@ class Additionalresources(ListView):
 
     template_name = 'ca_website/resource.html'
     context_object_name = 'resources'
+
+
+def test_view(request):
+    """."""
+    return render(request, 'ca_website/base.html', {})
