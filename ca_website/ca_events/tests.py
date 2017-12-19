@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 from django.test import TestCase
 from .models import Meeting, ServiceMeeting, ExternalResources
+from .models import InternalResources, Events
 import factory
 import datetime
 
@@ -73,12 +74,12 @@ class MeetingTestCase(TestCase):
         assert meet.accessiblility == ""
 
     def tearDown(self):
-        """Delete the test objects when done."""
+        """Delete the test object when done."""
         Meeting.objects.get(meeting_name="Test Meeting").delete()
 
 
 class ServiceMeetingFactory(factory.django.DjangoModelFactory):
-    """Factory for Meeting objects to test."""
+    """Factory for ServiceMeeting objects to test."""
 
     class Meta:
         """Meta class."""
@@ -122,7 +123,7 @@ class ServiceMeetingTestCase(TestCase):
         assert smeet.room == "500"
 
     def test_time_attributes(self):
-        """Test the Meeting object's time properties."""
+        """Test the ServiceMeeting object's time properties."""
         smeet = Meeting.objects.get(meeting_name='Test Service Meeting')
         assert smeet.start_time == "5:00 AM"
         assert isinstance(smeet.last_updated, datetime.datetime)
@@ -134,7 +135,7 @@ class ServiceMeetingTestCase(TestCase):
         assert smeet.notes == "These are some sample notes."
 
     def tearDown(self):
-        """Delete the test objects when done."""
+        """Delete the test object when done."""
         ServiceMeeting.objects.get(meeting_name="Service Meeting").delete()
 
 
@@ -159,17 +160,94 @@ class ExternalResourcesTestCase(TestCase):
         self.er = ExternalResources.create()
         self.er.save()
 
-    def test_service_meeting_object_exists(self):
+    def test_external_resources_object_exists(self):
         """Test that the ExternalResources object exists."""
         er = ExternalResources.objects.get(name='Test name')
         assert er
 
     def test_location_attributes(self):
         """Test the ExternalResources object's properties."""
-        er = Meeting.objects.get(meeting_name='Test Meeting')
+        er = Meeting.objects.get(name='Test name')
+        assert er.description == "Test description"
         assert er.name == "Test name"
-        assert er.street == "222 Walnut Ave"
 
     def tearDown(self):
-        """Delete the test objects when done."""
-        Meeting.objects.get(meeting_name="Test Service Meeting").delete()
+        """Delete the test object when done."""
+        ExternalResources.objects.get(name='Test name').delete()
+
+
+class InternalResourcesFactory(factory.django.DjangoModelFactory):
+    """Factory for InternalResources objects to test."""
+
+    class Meta:
+        """Meta class."""
+
+        model = InternalResources
+
+    name = "Test name"
+    description = "Test description"
+    # upload = models.URLField()
+
+
+class InternalResourcesTestCase(TestCase):
+    """Tests for the InternalResources class."""
+
+    def setUp(self):
+        """Setup for the InternalResources class tests."""
+        self.er = InternalResources.create()
+        self.er.save()
+
+    def test_internal_resources_object_exists(self):
+        """Test that the InternalResources object exists."""
+        er = InternalResources.objects.get(name='Test name')
+        assert er
+
+    def test_attributes(self):
+        """Test the InternalResources object's properties."""
+        er = Meeting.objects.get(name='Test name')
+        assert er.description == "Test description"
+        assert er.name == "Test name"
+
+    def tearDown(self):
+        """Delete the test object when done."""
+        Meeting.objects.get(name="Test name").delete()
+
+
+class EventsFactory(factory.django.DjangoModelFactory):
+    """Factory for Events objects to test."""
+
+    class Meta:
+        """Meta class."""
+
+        model = Events
+
+    event_name = "Sample event"
+    weekday = "Monday"
+    start_time = "5:00 AM"
+    end_time = "7:00 AM"
+    location_name = "Test location"
+    street = "999 Rose Ct"
+    suite = "987"
+    city = "Olympia"
+    zip_code = 44444
+    room = "420"
+    notes = "These are some sample notes for an event."
+    last_updated = datetime.datetime.now()
+
+
+class EventsTestCase(TestCase):
+    """Tests for the Events class."""
+
+    def setUp(self):
+        """Setup for the Events class tests."""
+        self.test_event = EventsFactory.create()
+        self.test_event.save()
+
+    def test_event_object_exists(self):
+        """Test that the Events object exists."""
+        test_event = Events.objects.get(event_name="Sample event")
+        assert test_event
+
+    def tearDown(self):
+        """Delete the test object when done."""
+        ExternalResources.objects.get(event_name="Sample event").delete()
