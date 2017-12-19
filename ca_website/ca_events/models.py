@@ -20,8 +20,8 @@ class Meeting(models.Model):
         ('sat', 'Saturday'),
     ]
     weekday = models.CharField(max_length=10, choices=weekday_choices)
-    start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
+    start_time = models.CharField(max_length=15)
+    end_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
     street = models.CharField(max_length=250)
     suite = models.CharField(max_length=150)
@@ -54,7 +54,7 @@ class ServiceMeeting(models.Model):
 
     meeting_name = models.CharField(max_length=50)
     meeting_day = models.CharField(max_length=100)
-    start_time = models.DateTimeField()
+    start_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
     street = models.CharField(max_length=250)
     suite = models.CharField(max_length=150)
@@ -80,8 +80,8 @@ class Events(models.Model):
         ('sat', 'Saturday'),
     ]
     weekday = models.CharField(max_length=10, choices=weekday_choices)
-    start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
+    start_time = models.CharField(max_length=15)
+    end_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
     street = models.CharField(max_length=250)
     suite = models.CharField(max_length=150)
