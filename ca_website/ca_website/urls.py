@@ -4,7 +4,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from ca_website import settings
 from django.conf.urls.static import static
-from ca_website.views import HomeView, About, Steps, Meetings, Eventinfo, Eventdetail, Additionalresources
+from ca_website.views import HomeView, About, Steps, Meetings, Eventinfo, Eventdetail, Additionalresources, test_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^events$', Eventinfo.as_view(), name='eventinfo'),
     url(r'^events/item/(?P<pk>\d+)', Eventdetail.as_view(), name='eventdetail'),
     url(r'^internal-resources', Additionalresources.as_view(), name='resources'),
+    url(r'^test$', test_view, name='homepage'),
 ]
 
 if settings.DEBUG:
