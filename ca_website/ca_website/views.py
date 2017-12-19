@@ -2,7 +2,7 @@
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from ca_events.models import Meeting
+from ca_events.models import Meeting, ServiceMeeting
 
 
 class HomeView(ListView):
@@ -31,6 +31,12 @@ class Meetings(ListView):
     model = Meeting
     template_name = 'ca_website/meeting.html'
     context_object_name = 'meetings'
+
+    def get_context_data(self, **kwargs):
+        context = super(Meetings, self).get_context_data(**kwargs)
+        context['meeting'] = Meeting.objects.all()
+        context['service_meeting'] = ServiceMeeting.objects.all()
+        return context
 
 
 class EventInfo(ListView):
