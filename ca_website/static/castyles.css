@@ -25,5 +25,11 @@
 
 .motto{
     width: 18em;
-    font-size: .8em;
+    font-size: .75em;
+    font-style: italic;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
 }
