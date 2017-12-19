@@ -90,14 +90,10 @@ class Events(models.Model):
     room = models.CharField(max_length=100)
     notes = models.TextField()
     accessiblility = models.CharField(max_length=150)
-<<<<<<< HEAD
-    last_updated = models.DateTimeField(auto_now=True)
+    last_updated = models.DateTimeField(auto_now_add=True, null=True)
     event_date = models.DateTimeField()
     published = models.BooleanField()
     contact_phone = models.CharField(max_length=15)
-=======
-    last_updated = models.DateTimeField(auto_now_add=True, null=True)
->>>>>>> 109fa536e0c65eefd5ff7afb5bbb082e3f78a699
 
 
 class ExternalResources(models.Model):
