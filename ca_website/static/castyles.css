@@ -15,5 +15,33 @@
 }
 
 .navlogo{
-    width: 1.5em;
+    width: 2.5em;
+}
+
+.nospace{
+    margin: 0px;
+    padding: 0px;
+}
+
+.motto{
+    width: 18em;
+    font-size: .75em;
+    font-style: italic;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+}
+
+.disclaimer{
+    font-size: .5em;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.contact{
+    float: right;
 }
