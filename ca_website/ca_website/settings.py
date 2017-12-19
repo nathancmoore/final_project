@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ca_website',
     'ca_events',
-    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +81,7 @@ DATABASES = {
         'NAME': os.environ.get('DATABASE_NAME', ''),
         'USER': os.environ.get('USER', ''),
         'PASSWORD': os.environ.get('PASSWORD', ''),
-        'HOST': 'localhost',
+        'HOST': os.environ.get('DATABASE_HOST', ''),
         'PORT': '5432',
         'TEST': {
             'NAME': 'TEST_DB',

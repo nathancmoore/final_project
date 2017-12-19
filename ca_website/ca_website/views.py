@@ -1,6 +1,7 @@
 """Detail views for site."""
 from django.views.generic import ListView, DetailView
-from django.views import view
+from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
 class HomeView(ListView):
@@ -17,7 +18,7 @@ class About(ListView):
     context_object_name = 'resources'
 
 
-class Steps(view):
+class Steps(TemplateView):
     """Display steps and traditions page."""
 
     template_name = 'ca_website/steps.html'
