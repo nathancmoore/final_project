@@ -157,7 +157,7 @@ class ExternalResourcesTestCase(TestCase):
 
     def setUp(self):
         """Setup for the ExternalResources class tests."""
-        self.er = ExternalResources.create()
+        self.er = ExternalResourcesFactory.create()
         self.er.save()
 
     def test_external_resources_object_exists(self):
@@ -194,7 +194,7 @@ class InternalResourcesTestCase(TestCase):
 
     def setUp(self):
         """Setup for the InternalResources class tests."""
-        self.er = InternalResources.create()
+        self.er = InternalResourcesFactory.create()
         self.er.save()
 
     def test_internal_resources_object_exists(self):
