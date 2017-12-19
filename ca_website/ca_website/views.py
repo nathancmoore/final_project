@@ -2,6 +2,7 @@
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from ca_events.models import Meeting
 
 
 class HomeView(ListView):
@@ -27,6 +28,7 @@ class Steps(TemplateView):
 class Meetings(ListView):
     """Display meeting schedule page."""
 
+    model = Meeting
     template_name = 'ca_website/meeting.html'
     context_object_name = 'meetings'
 
