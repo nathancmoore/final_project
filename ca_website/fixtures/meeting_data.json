@@ -17,7 +17,7 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "C, M",
-            "accessibility": true,
+            "accessibility": "true",
             "last_updated": ""
         }
     },
@@ -40,7 +40,7 @@
             "notes": "",
             "duration": 75,
             "meeting_format": "C, M",
-            "accessibility": false,
+            "accessibility": "false",
             "last_updated": ""
         }
     },
@@ -62,7 +62,7 @@
             "notes": "Use Alley Entrance",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
+            "accessibility": "false",
             "last_updated": ""
         }
     },
@@ -84,7 +84,7 @@
             "notes": "2nd Floor",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
+            "accessibility": "false",
             "last_updated": ""
         }
     },
