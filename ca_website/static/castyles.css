@@ -39,7 +39,7 @@
 }
 
 .clearfix{
-    clear: right;
+    clear: both;
 }
 
 .contact{

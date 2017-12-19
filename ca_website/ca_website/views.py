@@ -54,4 +54,4 @@ class Additionalresources(ListView):
 
 def test_view(request):
     """."""
-    return render(request, 'ca_website/base.html', {})
+    return render(request, 'ca_website/home.html', {})
