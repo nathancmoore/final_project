@@ -31,21 +31,21 @@ class Meetings(ListView):
     context_object_name = 'meetings'
 
 
-class Eventinfo(ListView):
+class EventInfo(ListView):
     """Display Event info page."""
 
     template_name = 'ca_website/event.html'
     context_object_name = 'events'
 
 
-class Eventdetail(DetailView):
+class EventDetail(DetailView):
     """Display one event with details."""
 
     template_name = 'ca_website/event_detail.html'
     context_object_name = 'event'
 
 
-class Additionalresources(ListView):
+class AdditionalResources(ListView):
     """Display links to additional resources."""
 
     template_name = 'ca_website/resource.html'
