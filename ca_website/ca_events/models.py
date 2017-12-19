@@ -45,8 +45,8 @@ class Meeting(models.Model):
         max_length=200,
         choices=meeting_format_choices,
     )
-    accessiblility = models.CharField(max_length=150)
-    last_updated = models.DateTimeField(auto_now=True)
+    accessibility = models.CharField(max_length=150)
+    last_updated = models.DateTimeField(auto_now_add=True, null=True)
 
 
 class ServiceMeeting(models.Model):

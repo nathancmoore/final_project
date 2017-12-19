@@ -1,0 +1,2 @@
+[{"model": "ca_events.meeting", "pk": 1, "fields": {"district": 2, "meeting_name": "Blues Brothers", "weekday": "Sunday", "start_time": "9:00 AM", "end_time": "10:00 AM", "location_name": "Evergreen Lanes", "street": "5111 Claremont Way", "suite": "", "city": "Everett", "zip_code": 98203, "room": "Conference Room", "notes": "", "duration": 60, "meeting_format": "C, M", "accessibility": "true", "last_updated": "2017-12-19 16:34:
+12.147469-05"}}]
