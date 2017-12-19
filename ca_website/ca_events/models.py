@@ -89,24 +89,11 @@ class Events(models.Model):
     zip_code = models.IntegerField()
     room = models.CharField(max_length=100)
     notes = models.TextField()
-    duration = models.CharField(max_length=200)
-    meeting_format_choices = [
-        ('BB', 'Big Book Study'),
-        ('C', 'Closed meeting for those with a desire to stop using cocaine and all other substances. Newcomers welcome.'),
-        ('CL', 'Candle Light'),
-        ('LS', 'Literature Study'),
-        ('M', 'Men only'),
-        ('NC', 'No children please.'),
-        ('SB', 'Meeting has a smoke break.'),
-        ('W', 'Women only.'),
-        ('HC', 'Wheelchair accessible'),
-    ]
-    event_format = MultiSelectField(
-        max_length=200,
-        choices=meeting_format_choices,
-    )
     accessiblility = models.CharField(max_length=150)
     last_updated = models.DateTimeField(auto_now=True)
+    event_date = models.DateTimeField()
+    published = models.BooleanField()
+    contact_phone = models.CharField(max_length=15)
 
 
 class ExternalResources(models.Model):
