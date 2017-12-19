@@ -33,3 +33,15 @@
     position: absolute;
     bottom: 0px;
 }
+
+.disclaimer{
+    font-size: .5em;
+}
+
+.clearfix{
+    clear: right;
+}
+
+.contact{
+    float: right;
+}
