@@ -86,14 +86,14 @@ class Events(models.Model):
     street = models.CharField(max_length=250)
     suite = models.CharField(max_length=150)
     city = models.CharField(max_length=150)
-    zip_code = models.IntegerField()
+    zip_code = models.IntegerField(null=True)
     room = models.CharField(max_length=100)
     notes = models.TextField()
     accessiblility = models.CharField(max_length=150)
     last_updated = models.DateTimeField(auto_now_add=True, null=True)
-    event_date = models.DateTimeField()
-    published = models.BooleanField()
-    contact_phone = models.CharField(max_length=15)
+    event_date = models.DateTimeField(null=True)
+    published = models.BooleanField(default=False)
+    contact_phone = models.CharField(max_length=15, null=True)
 
 
 class ExternalResources(models.Model):
