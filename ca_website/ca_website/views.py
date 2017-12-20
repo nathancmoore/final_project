@@ -56,8 +56,13 @@ class Meetings(ListView):
 class EventInfo(ListView):
     """Display Event info page."""
 
-    template_name = 'ca_website/event.html'
-    context_object_name = 'events'
+    template_name = 'ca_website/events.html'
+    model = Events
+
+    def get_context_data(self, **kwargs):
+        context = super(EventInfo, self).get_context_data(**kwargs)
+        context['events'] = Events.objects.all()
+        return context
 
 
 class EventDetail(DetailView):
