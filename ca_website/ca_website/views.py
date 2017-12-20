@@ -78,3 +78,17 @@ class AdditionalResources(ListView):
 def test_view(request):
     """."""
     return render(request, 'ca_website/home.html', {})
+
+
+class MeetingDetail(DetailView):
+    """Display all data for a single meeting."""
+
+    model = Meeting
+    template_name = 'ca_website/meeting_detail.html'
+    context_object_name = 'meeting_1'
+
+    def get_context_data(self, **kwargs):
+        
+        context = super(MeetingDetail, self).get_context_data(**kwargs)
+        # import pdb; pdb.set_trace()
+        return context
