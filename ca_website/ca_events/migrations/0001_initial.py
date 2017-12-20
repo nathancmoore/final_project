@@ -36,15 +36,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='ExternalResources',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=150)),
-                ('description', models.TextField(blank=True, default='', max_length=500)),
-                ('link', models.URLField()),
-            ],
-        ),
-        migrations.CreateModel(
             name='InternalResources',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),

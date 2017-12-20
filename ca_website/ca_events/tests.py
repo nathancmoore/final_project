@@ -139,43 +139,6 @@ class ServiceMeetingTestCase(TestCase):
         ServiceMeeting.objects.get(meeting_name="Service Meeting").delete()
 
 
-class ExternalResourcesFactory(factory.django.DjangoModelFactory):
-    """Factory for ExternalResources objects to test."""
-
-    class Meta:
-        """Meta class."""
-
-        model = ExternalResources
-
-    name = "Test name"
-    description = "Test description"
-    # link = models.URLField()
-
-
-class ExternalResourcesTestCase(TestCase):
-    """Tests for the ExternalResources class."""
-
-    def setUp(self):
-        """Setup for the ExternalResources class tests."""
-        self.er = ExternalResourcesFactory.create()
-        self.er.save()
-
-    def test_external_resources_object_exists(self):
-        """Test that the ExternalResources object exists."""
-        er = ExternalResources.objects.get(name='Test name')
-        assert er
-
-    def test_location_attributes(self):
-        """Test the ExternalResources object's properties."""
-        er = Meeting.objects.get(name='Test name')
-        assert er.description == "Test description"
-        assert er.name == "Test name"
-
-    def tearDown(self):
-        """Delete the test object when done."""
-        ExternalResources.objects.get(name='Test name').delete()
-
-
 class InternalResourcesFactory(factory.django.DjangoModelFactory):
     """Factory for InternalResources objects to test."""
 
