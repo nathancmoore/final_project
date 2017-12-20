@@ -53,3 +53,8 @@
 .event_image{
     width: 400px;
 }
+
+.cleartop{
+    margin-top: 100px;
+    text-align: center;
+}
