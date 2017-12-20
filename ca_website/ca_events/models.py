@@ -96,14 +96,6 @@ class Events(models.Model):
     contact_phone = models.CharField(max_length=15, null=True)
 
 
-class ExternalResources(models.Model):
-    """Resource model for CA site."""
-
-    name = models.CharField(max_length=150)
-    description = models.TextField(max_length=500, blank=True, default='')
-    link = models.URLField()
-
-
 class InternalResources(models.Model):
     """Resource model for CA site."""
 
