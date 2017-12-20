@@ -11,13 +11,13 @@ class Meeting(models.Model):
     district = models.IntegerField()
     meeting_name = models.CharField(max_length=50)
     weekday_choices = [
-        ('sun', 'Sunday'),
-        ('mon', 'Monday'),
-        ('tue', 'Tuesday'),
-        ('wed', 'Wednesday'),
-        ('thu', 'Thursday'),
-        ('fri', 'Friday'),
-        ('sat', 'Saturday'),
+        ('0', 'Monday'),
+        ('1', 'Tuesday'),
+        ('2', 'Wednesday'),
+        ('3', 'Thursday'),
+        ('4', 'Friday'),
+        ('5', 'Saturday'),
+        ('6', 'Sunday'),
     ]
     weekday = models.CharField(max_length=10, choices=weekday_choices)
     start_time = models.CharField(max_length=15)
