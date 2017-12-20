@@ -89,7 +89,7 @@ class Events(models.Model):
     zip_code = models.IntegerField(null=True)
     room = models.CharField(max_length=100)
     notes = models.TextField()
-    accessiblility = models.CharField(max_length=150)
+    accessibility = models.CharField(max_length=150)
     last_updated = models.DateTimeField(auto_now_add=True, null=True)
     event_date = models.DateTimeField(null=True)
     published = models.BooleanField(default=False)
