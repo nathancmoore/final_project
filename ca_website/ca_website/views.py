@@ -23,7 +23,7 @@ class HomeView(ListView):
         context = super(HomeView, self).get_context_data(**kwargs)
         context['meetings'] = Meeting.objects.filter(weekday=weekday)[:3]
         context['events'] = Events.objects.filter(published=True)
-        import pdb; pdb.set_trace()
+        # import pdb; pdb.set_trace()
         return context
 
 
