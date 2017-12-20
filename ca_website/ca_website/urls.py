@@ -18,7 +18,6 @@ urlpatterns = [
     path('events/', EventInfo.as_view(), name='eventinfo'),
     path('events/item/<event-id>', EventDetail.as_view(), name='eventdetail'),
     path('additional-resources', AdditionalResources.as_view(), name='resources'),
-    path('test', test_view, name='homepage'),
     path('meeting-detail/<pk>/', MeetingDetail.as_view(), name='meetingdetail'),
     path('event-detail/<pk>/', EventDetail.as_view(), name='meetingdetail')
 ]
