@@ -2,6 +2,7 @@
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from datetime import datetime
 from ca_events.models import Meeting, ServiceMeeting
 
 
@@ -10,6 +11,14 @@ class HomeView(ListView):
 
     template_name = 'ca_website/home.html'
     context_object_name = 'meetings'
+    model = Meeting
+
+    def get_context_data(self, **kwargs):
+        """Get specific data needed."""
+        today = datetime.now()
+        weekday = today.weekday()
+        context = super(ListView, self).get_context_data(**kwargs)
+        import pdb; pdb.set_trace()
 
 
 class About(ListView):
