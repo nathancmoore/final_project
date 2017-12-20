@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <script>
+    <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous">
@@ -111,6 +111,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title ">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -139,6 +140,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -167,6 +169,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -195,6 +198,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -223,6 +227,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -251,6 +256,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -279,6 +285,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -299,33 +306,35 @@
         </div>
     </div>
 
-    <h2>Service Meetings</h2>
-    <div class='container'>
-        <div class='row'>
-            {% for sm in service_meetings%}
-            <div class='col-sm-6'>
-                <div class="card">
-                    <div class="card-block">
-                        <h3 class="card-title">{{ sm.meeting_name }}</h3> {{ sm.start_time }}-{{ sm.end_time }}
-                        <p class="card-text">
-                        {{ sm.location_name }}
-                        {% if sm.room %}
-                        ({{ sm.room }})
-                        {% endif %}
-                        </p>
-                        <p class="card-text">
-                        {{ sm.street }}
-                        </p>
-                        <p class="card-text">
-                        {{ sm.city }}
-                        <a href='http://maps.google.com/?daddr={{ sm.street }},+{{sm.city}}+WA' target="_blank">Get Directions</a>
-                        </p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample">Show Sercive Meetings</a>
+    <div class="collapse" id="collapseExample">
+        <h2>Service Meetings</h2>
+        <div class='container'>
+            <div class='row'>
+                {% for sm in service_meetings%}
+                <div class='col-sm-6'>
+                    <div class="card">
+                        <div class="card-block">
+                            <h3 class="card-title">{{ sm.meeting_name }}</h3> {{ sm.start_time }}-{{ sm.end_time }}
+                            <p class="card-text">
+                            {{ sm.location_name }}
+                            {% if sm.room %}
+                            ({{ sm.room }})
+                            {% endif %}
+                            </p>
+                            <p class="card-text">
+                            {{ sm.street }}
+                            </p>
+                            <p class="card-text">
+                            {{ sm.city }}
+                            <a href='http://maps.google.com/?daddr={{ sm.street }},+{{sm.city}}+WA' target="_blank">Get Directions</a>
+                            </p>
+                        </div>
                     </div>
-                </div>
 
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
-
 {% endblock %}
