@@ -2,6 +2,33 @@
 
 {% block content %}
     {% for meeting in meetings %}
+        {{ meeting.district }}
+        {{ meeting.meeting_name }}
+        {{ meeting.weekday }}
+        {{ meeting.start_time }}
+        {{ meeting.end_time }}
+        {{ meeting.location_name }}
+        {{ meeting.street }}
+        {{ meeting.suite }}
+        {{ meeting.city }}
+        {{ meeting.zip_code }}
+        {{ meeting.room }}
+        {{ meeting.notes }}
+        {{ meeting.duration }}
+        {{ meeting.meeting_format }}
+        {{ meeting.last_updated }}
+    {% endfor %}
 
+    {% for meeting in service_meeting %}
+        {{ meeting.meeting_name }}
+        {{ meeting.day }}
+        {{ meeting.location_name }}
+        {{ meeting.street }}
+        {{ meeting.suite }}
+        {{ meeting.city }}
+        {{ meeting.zip_code }}
+        {{ meeting.room }}
+        {{ meeting.notes }}
+        {{ meeting.last_updated }}
     {% endfor %}
 {% endblock %}
