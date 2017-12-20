@@ -1,5 +1,5 @@
 {% extends 'ca_website/base.html' %}
-
+{% load static %}
 {% block content %}
     <div class="jumbotron" id="welcome">
       <h1 class="display-3">Welcome to C.A.</h1>
@@ -16,9 +16,9 @@
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-block">
-                  <img src="{{ events.event_photo }}" alt="">
-                  <h3 class="card-title">{{ events.event_name }}</h3>
-                  <p class="card-text">{{ events.event_name }}</p>
+                  <img class="event_image" src="{{ event.event_photo.url }}">
+                  <h3 class="card-title">{{ event.event_name }}</h3>
+                  <p class="card-text">{{ event.event_name }}</p>
                   <a href="#" class="btn btn-primary">Details</a>
                 </div>
               </div>
