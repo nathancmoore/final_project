@@ -73,9 +73,9 @@ class MeetingTestCase(TestCase):
         assert meet.meeting_format == "BB, W"
         assert meet.accessibility == ""
 
-    # def tearDown(self):
-    #     """Delete the test object when done."""
-    #     Meeting.objects.get(meeting_name="Test Meeting").delete()
+    def tearDown(self):
+        """Delete the test object when done."""
+        Meeting.objects.get(meeting_name="Test Meeting").delete()
 
 
 class ServiceMeetingFactory(factory.django.DjangoModelFactory):
@@ -133,9 +133,9 @@ class ServiceMeetingTestCase(TestCase):
         smeet = ServiceMeeting.objects.get(meeting_name='Service Meeting')
         assert smeet.notes == "These are some sample notes."
 
-    # def tearDown(self):
-    #     """Delete the test object when done."""
-    #     ServiceMeeting.objects.get(meeting_name="Service Meeting").delete()
+    def tearDown(self):
+        """Delete the test object when done."""
+        ServiceMeeting.objects.get(meeting_name="Service Meeting").delete()
 
 
 class InternalResourcesFactory(factory.django.DjangoModelFactory):
@@ -170,9 +170,9 @@ class InternalResourcesTestCase(TestCase):
         assert er.description == "Test description"
         assert er.name == "Test name"
 
-    # def tearDown(self):
-    #     """Delete the test object when done."""
-    #     Meeting.objects.get(name="Test name").delete()
+    def tearDown(self):
+        """Delete the test object when done."""
+        InternalResources.objects.get(name="Test name").delete()
 
 
 class EventsFactory(factory.django.DjangoModelFactory):
@@ -211,6 +211,6 @@ class EventsTestCase(TestCase):
         test_event = Events.objects.get(event_name="Sample event")
         assert test_event
 
-    # def tearDown(self):
-    #     """Delete the test object when done."""
-    #     Events.objects.get(event_name="Sample event").delete()
+    def tearDown(self):
+        """Delete the test object when done."""
+        Events.objects.get(event_name="Sample event").delete()

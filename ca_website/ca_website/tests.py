@@ -17,40 +17,40 @@ class HomeViewTestCase(TestCase):
         assert response.template_name == 'ca_website/home.html'
 
 
-# class AboutTestCase(TestCase):
-#     """Tests for the About view."""
+class AboutTestCase(TestCase):
+    """Tests for the About view."""
 
-#     def setUp(self):
-#         """Setup for the About view."""
+    def setUp(self):
+        """Setup for the About view."""
 
-#     def test_home_view_exists(self):
-#         """Test that the About view exists."""
-#         response = About()
-#         assert response.template_name == 'ca_website/about.html'
-
-
-# class StepsTestCase(TestCase):
-#     """Tests for the Steps view."""
-
-#     def setUp(self):
-#         """Setup for the Steps view."""
-
-#     def test_home_view_exists(self):
-#         """Test that the Steps view exists."""
-#         response = Steps()
-#         assert response.template_name == 'ca_website/steps.html'
+    def test_home_view_exists(self):
+        """Test that the About view exists."""
+        response = About()
+        assert response.template_name == 'ca_website/about.html'
 
 
-# class MeetingsTestCase(TestCase):
-#     """Tests for the Meetings view."""
+class StepsTestCase(TestCase):
+    """Tests for the Steps view."""
 
-#     def setUp(self):
-#         """Setup for the Meetings view."""
+    def setUp(self):
+        """Setup for the Steps view."""
 
-#     def test_home_view_exists(self):
-#         """Test that the Meetings view exists."""
-#         response = Meetings()
-#         assert response.template_name == 'ca_website/meeting.html'
+    def test_home_view_exists(self):
+        """Test that the Steps view exists."""
+        response = Steps()
+        assert response.template_name == 'ca_website/steps_traditions.html'
+
+
+class MeetingsTestCase(TestCase):
+    """Tests for the Meetings view."""
+
+    def setUp(self):
+        """Setup for the Meetings view."""
+
+    def test_home_view_exists(self):
+        """Test that the Meetings view exists."""
+        response = Meetings()
+        assert response.template_name == 'ca_website/meeting.html'
 
 
 # class EventInfoTestCase(TestCase):
