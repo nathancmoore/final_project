@@ -11,7 +11,7 @@ from ca_website.views import HomeView, About, Steps, Meetings, EventInfo, EventD
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', HomeView.as_view(), name='homepage'),
+    path('', HomeView.as_view(), name='homepage'),
     path('about-ca/', About.as_view(), name='about'),
     path('steps-traditions/', Steps.as_view(), name='steps'),
     path('meeting-schedule/', Meetings.as_view(), name='meetings'),
