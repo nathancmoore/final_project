@@ -35,7 +35,6 @@
     <div class="container">
         <div class="row">
             {% for meeting in meetings %}
-            <!-- meeting name, meeting day, meeting time -->
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-block">
@@ -60,4 +59,33 @@
             <a href="#" class="btn btn-primary">All Meetings</a>
         </div>
     </div>
+   <!--  {% for day in meeting_days %}
+        <div class="container">
+        <div class="row">
+            {% for meeting in day %}
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-block">
+                  <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                  <p class="card-text">
+                      {{ meeting.location_name }}
+                      {% if meeting.room %}
+                       ({{ meeting.room }})
+                      {% endif %}
+                  </p>
+                  <p class="card-text">
+                      {{ meeting.street }}
+                  </p>
+                  <p class="card-text">
+                      {{ meeting.city }}
+                      <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            <a href="#" class="btn btn-primary">All Meetings</a>
+        </div>
+    </div> -->
+    {% endfor %}
 {% endblock %}
