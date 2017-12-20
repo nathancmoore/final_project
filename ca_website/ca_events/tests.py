@@ -2,7 +2,7 @@
 
 from __future__ import unicode_literals
 from django.test import TestCase
-from .models import Meeting, ServiceMeeting, ExternalResources
+from .models import Meeting, ServiceMeeting
 from .models import InternalResources, Events
 import factory
 import datetime
@@ -30,7 +30,7 @@ class MeetingFactory(factory.django.DjangoModelFactory):
     notes = "These are some notes about the test meeting."
     duration = 60
     meeting_format = "BB, W"
-    accessiblility = ""
+    accessibility = ""
     last_updated = datetime.datetime.now()
 
 
@@ -71,11 +71,11 @@ class MeetingTestCase(TestCase):
         assert meet.weekday == "Saturday"
         assert meet.notes == "These are some notes about the test meeting."
         assert meet.meeting_format == "BB, W"
-        assert meet.accessiblility == ""
+        assert meet.accessibility == ""
 
-    def tearDown(self):
-        """Delete the test object when done."""
-        Meeting.objects.get(meeting_name="Test Meeting").delete()
+    # def tearDown(self):
+    #     """Delete the test object when done."""
+    #     Meeting.objects.get(meeting_name="Test Meeting").delete()
 
 
 class ServiceMeetingFactory(factory.django.DjangoModelFactory):
@@ -104,17 +104,17 @@ class ServiceMeetingTestCase(TestCase):
 
     def setUp(self):
         """Setup for the ServiceMeeting class tests."""
-        self.smeet = MeetingFactory.create()
+        self.smeet = ServiceMeetingFactory.create()
         self.smeet.save()
 
     def test_service_meeting_object_exists(self):
         """Test that the ServiceMeeting object exists."""
-        smeet = ServiceMeeting.objects.get(meeting_name='Test Service Meeting')
+        smeet = ServiceMeeting.objects.get(meeting_name='Service Meeting')
         assert smeet
 
     def test_location_attributes(self):
         """Test the ServiceMeeting object's location properties."""
-        smeet = Meeting.objects.get(meeting_name='Test Meeting')
+        smeet = ServiceMeeting.objects.get(meeting_name='Service Meeting')
         assert smeet.location_name == "Test location"
         assert smeet.street == "222 Walnut Ave"
         assert smeet.suite == "ABC"
@@ -124,19 +124,18 @@ class ServiceMeetingTestCase(TestCase):
 
     def test_time_attributes(self):
         """Test the ServiceMeeting object's time properties."""
-        smeet = Meeting.objects.get(meeting_name='Test Service Meeting')
+        smeet = ServiceMeeting.objects.get(meeting_name='Service Meeting')
         assert smeet.start_time == "5:00 AM"
         assert isinstance(smeet.last_updated, datetime.datetime)
 
     def test_detail_attributes(self):
         """Test the ServiceMeeting object's detail properties."""
-        smeet = Meeting.objects.get(meeting_name='Test Service Meeting')
-        assert smeet.weekday == "Monday"
+        smeet = ServiceMeeting.objects.get(meeting_name='Service Meeting')
         assert smeet.notes == "These are some sample notes."
 
-    def tearDown(self):
-        """Delete the test object when done."""
-        ServiceMeeting.objects.get(meeting_name="Service Meeting").delete()
+    # def tearDown(self):
+    #     """Delete the test object when done."""
+    #     ServiceMeeting.objects.get(meeting_name="Service Meeting").delete()
 
 
 class InternalResourcesFactory(factory.django.DjangoModelFactory):
@@ -167,13 +166,13 @@ class InternalResourcesTestCase(TestCase):
 
     def test_attributes(self):
         """Test the InternalResources object's properties."""
-        er = Meeting.objects.get(name='Test name')
+        er = InternalResources.objects.get(name='Test name')
         assert er.description == "Test description"
         assert er.name == "Test name"
 
-    def tearDown(self):
-        """Delete the test object when done."""
-        Meeting.objects.get(name="Test name").delete()
+    # def tearDown(self):
+    #     """Delete the test object when done."""
+    #     Meeting.objects.get(name="Test name").delete()
 
 
 class EventsFactory(factory.django.DjangoModelFactory):
@@ -212,6 +211,6 @@ class EventsTestCase(TestCase):
         test_event = Events.objects.get(event_name="Sample event")
         assert test_event
 
-    def tearDown(self):
-        """Delete the test object when done."""
-        ExternalResources.objects.get(event_name="Sample event").delete()
+    # def tearDown(self):
+    #     """Delete the test object when done."""
+    #     Events.objects.get(event_name="Sample event").delete()
