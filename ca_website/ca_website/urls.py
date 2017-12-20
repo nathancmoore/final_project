@@ -19,7 +19,8 @@ urlpatterns = [
     path('events/item/<event-id>', EventDetail.as_view(), name='eventdetail'),
     path('internal-resources', AdditionalResources.as_view(), name='resources'),
     path('test', test_view, name='homepage'),
-    path('meeting-detail/<pk>/', MeetingDetail.as_view(), name='meetingdetail')
+    path('meeting-detail/<pk>/', MeetingDetail.as_view(), name='meetingdetail'),
+    path('event-detail/<pk>/', EventDetail.as_view(), name='meetingdetail')
 ]
 
 if settings.DEBUG:
