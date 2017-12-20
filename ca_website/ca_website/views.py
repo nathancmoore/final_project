@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from datetime import datetime
+from pytz import timezone
 from ca_events.models import Meeting, ServiceMeeting
 
 
@@ -15,9 +16,13 @@ class HomeView(ListView):
 
     def get_context_data(self, **kwargs):
         """Get specific data needed."""
+        pac = timezone('US/Pacific-New')
         today = datetime.now()
-        weekday = today.weekday()
+        now = today.astimezone(pac)
+        weekday = now.strftime('%A')
         context = super(HomeView, self).get_context_data(**kwargs)
+        context['meetings'] = Meeting.objects.filter(weekday=weekday)[:3]
+        return context
 
 
 class About(ListView):

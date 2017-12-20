@@ -1,7 +1,7 @@
 {% extends 'ca_website/base.html' %}
 
 {% block content %}
-    <div class="jumbotron">
+    <div class="jumbotron" id="welcome">
       <h1 class="display-3">Welcome to C.A.</h1>
         <p>Welcome to Cocaine Anonymous. We are all here for the same reason—our inability to stop using cocaine and all other mind-altering substances. The first step towards solving any problem is admitting that there is a problem.</p>
         <p>The problem, as we see it, consists of an obsession of the mind and an allergy of the body. The obsession is a continued and irresistible thought of the drugs and the next high. The allergy creates an absolute inability to stop using once we begin.</p>
@@ -11,15 +11,14 @@
       </p>
     </div>
     <!-- <div class="container">
-        <div class="row"> -->
+        <div class="row">
             {% for event in events %}
-            <!-- event photo, event name, event date, event city -->
-            <!-- <div class="col-sm-6">
+            <div class="col-sm-6">
               <div class="card">
                 <div class="card-block">
-                  <h3 class="card-title">Special title treatment</h3>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h3 class="card-title">{{ events.event_name }}</h3>
+                  <p class="card-text">{{  }}</p>
+                  <a href="#" class="btn btn-primary">Details</a>
                 </div>
               </div>
             </div>
@@ -36,7 +35,9 @@
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3>
                   <p class="card-text">
-                      {{ meeting.week_day }}, {{ meeting.start_time }}
+                      {{ meeting.weekday }}, {{ meeting.start_time }}
+                  </p>
+                  <p class="card-text">
                       {{ meeting.location_name }}
                   </p>
                   <a href="#" class="btn btn-primary">Details</a>
@@ -44,7 +45,7 @@
               </div>
             </div>
             {% endfor %}
-            <a href="#" class="btn btn-primary">All Meetigns</a>
+            <a href="#" class="btn btn-primary">All Meetings</a>
         </div>
     </div>
 {% endblock %}
