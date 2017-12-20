@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <script
+    <script>
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous">
@@ -306,19 +306,19 @@
             <div class='col-sm-6'>
                 <div class="card">
                     <div class="card-block">
-                        <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                        <h3 class="card-title">{{ sm.meeting_name }}</h3> {{ sm.start_time }}-{{ sm.end_time }}
                         <p class="card-text">
-                        {{ meeting.location_name }}
-                        {% if meeting.room %}
-                        ({{ meeting.room }})
+                        {{ sm.location_name }}
+                        {% if sm.room %}
+                        ({{ sm.room }})
                         {% endif %}
                         </p>
                         <p class="card-text">
-                        {{ meeting.street }}
+                        {{ sm.street }}
                         </p>
                         <p class="card-text">
-                        {{ meeting.city }}
-                        <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
+                        {{ sm.city }}
+                        <a href='http://maps.google.com/?daddr={{ sm.street }},+{{sm.city}}+WA' target="_blank">Get Directions</a>
                         </p>
                     </div>
                 </div>
