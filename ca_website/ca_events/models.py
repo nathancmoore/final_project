@@ -79,7 +79,6 @@ class Events(models.Model):
         ('fri', 'Friday'),
         ('sat', 'Saturday'),
     ]
-    weekday = models.CharField(max_length=10, choices=weekday_choices)
     start_time = models.CharField(max_length=15)
     end_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
