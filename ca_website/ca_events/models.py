@@ -2,7 +2,6 @@
 
 
 from django.db import models
-from multiselectfield import MultiSelectField
 
 
 class Meeting(models.Model):
@@ -30,21 +29,7 @@ class Meeting(models.Model):
     room = models.CharField(max_length=100)
     notes = models.TextField()
     duration = models.CharField(max_length=200)
-    meeting_format_choices = [
-        ('BB', 'Big Book Study'),
-        ('C', 'Closed meeting for those with a desire to stop using cocaine and all other substances. Newcomers welcome.'),
-        ('CL', 'Candlelight'),
-        ('LS', 'Literature Study'),
-        ('M', 'Men only'),
-        ('NC', 'No children please.'),
-        ('SB', 'Meeting has a smoke break.'),
-        ('W', 'Women only.'),
-        ('HC', 'Wheelchair accessible'),
-    ]
-    meeting_format = MultiSelectField(
-        max_length=200,
-        choices=meeting_format_choices,
-    )
+    meeting_format = models.CharField(max_length=30)
     accessibility = models.CharField(max_length=150)
     last_updated = models.DateTimeField(auto_now_add=True, null=True)
 
