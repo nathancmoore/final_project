@@ -11,13 +11,13 @@ class Meeting(models.Model):
     district = models.IntegerField()
     meeting_name = models.CharField(max_length=50)
     weekday_choices = [
-        ('sun', 'Sunday'),
-        ('mon', 'Monday'),
-        ('tue', 'Tuesday'),
-        ('wed', 'Wednesday'),
-        ('thu', 'Thursday'),
-        ('fri', 'Friday'),
-        ('sat', 'Saturday'),
+        ('0', 'Monday'),
+        ('1', 'Tuesday'),
+        ('2', 'Wednesday'),
+        ('3', 'Thursday'),
+        ('4', 'Friday'),
+        ('5', 'Saturday'),
+        ('6', 'Sunday'),
     ]
     weekday = models.CharField(max_length=10, choices=weekday_choices)
     start_time = models.CharField(max_length=15)
@@ -86,7 +86,7 @@ class Events(models.Model):
     street = models.CharField(max_length=250)
     suite = models.CharField(max_length=150)
     city = models.CharField(max_length=150)
-    zip_code = models.IntegerField()
+    zip_code = models.IntegerField(null=True)
     room = models.CharField(max_length=100)
     notes = models.TextField()
     accessiblility = models.CharField(max_length=150)
