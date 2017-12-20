@@ -9,7 +9,8 @@
               <img class="event_image" src="{{ event.event_photo.url }}">
               <h3 class="card-title">{{ event.event_name }}</h3>
               <p class="card-text">{{ event.notes }}</p>
-              <p class="card-text">{{ event.location_name }}, {{ event.event_date }}, {{ event.start_time }}</p>
+              <p class="card-text">{{ event.location_name }}, {{ event.event_date }}, {{ event.start_time }} <a href='http://maps.google.com/?daddr={{ event.street }},+{{event.city}}+WA' target="_blank">Get Directions</a>
+              </p>
               <a href="#" class="btn btn-primary">Details</a>
             </div>
           </div>
