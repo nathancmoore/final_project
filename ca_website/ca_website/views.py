@@ -35,7 +35,7 @@ class About(ListView):
 class Steps(TemplateView):
     """Display steps and traditions page."""
 
-    template_name = 'ca_website/steps.html'
+    template_name = 'ca_website/steps_traditions.html'
 
 
 class Meetings(ListView):
