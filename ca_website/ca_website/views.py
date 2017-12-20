@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from datetime import datetime
 from pytz import timezone
-from ca_events.models import Meeting, ServiceMeeting
+from ca_events.models import Meeting, ServiceMeeting, Events
 
 
 class HomeView(ListView):
@@ -22,6 +22,8 @@ class HomeView(ListView):
         weekday = now.strftime('%A')
         context = super(HomeView, self).get_context_data(**kwargs)
         context['meetings'] = Meeting.objects.filter(weekday=weekday)[:3]
+        context['events'] = Events.objects.filter(published=True)
+        import pdb; pdb.set_trace()
         return context
 
 
