@@ -47,7 +47,7 @@ class Meetings(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(Meetings, self).get_context_data(**kwargs)
-        context['meeting'] = Meeting.objects.all()
+        context['service_meetings'] = ServiceMeeting.objects.all()
         context['sunday_meetings'] = Meeting.objects.filter(weekday="Sunday")
         context['monday_meetings'] = Meeting.objects.filter(weekday="Monday")
         context['tuesday_meetings'] = Meeting.objects.filter(weekday="Tuesday")
@@ -55,8 +55,6 @@ class Meetings(ListView):
         context['thursday_meetings'] = Meeting.objects.filter(weekday="Thursday")
         context['friday_meetings'] = Meeting.objects.filter(weekday="Friday")
         context['saturday_meetings'] = Meeting.objects.filter(weekday="Saturday")
-        context['meeting_days'] = ['sunday_meetings', 'monday_meetings', 'tuedsay_meetings', 'wednesday_meetings', 'thursday_meetings', 'friday_meetings', 'saturday_meetings']
-        # import pdb; pdb.set_trace()
         return context
 
 
