@@ -302,9 +302,29 @@
     <h2>Service Meetings</h2>
     <div class='container'>
         <div class='row'>
-            {% for sm in service_meeting%}
+            {% for sm in service_meetings%}
             <div class='col-sm-6'>
+                <div class="card">
+                    <div class="card-block">
+                        <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
+                        <p class="card-text">
+                        {{ meeting.location_name }}
+                        {% if meeting.room %}
+                        ({{ meeting.room }})
+                        {% endif %}
+                        </p>
+                        <p class="card-text">
+                        {{ meeting.street }}
+                        </p>
+                        <p class="card-text">
+                        {{ meeting.city }}
+                        <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
+                        </p>
+                    </div>
+                </div>
+
             </div>
+            {% endfor %}
         </div>
     </div>
 
