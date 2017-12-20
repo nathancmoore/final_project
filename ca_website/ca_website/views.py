@@ -27,11 +27,10 @@ class HomeView(ListView):
         return context
 
 
-class About(ListView):
+class About(TemplateView):
     """Display about-ca page."""
 
     template_name = 'ca_website/about.html'
-    context_object_name = 'resources'
 
 
 class Steps(TemplateView):
