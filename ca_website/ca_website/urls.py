@@ -15,7 +15,7 @@ urlpatterns = [
     path('meeting-schedule/', Meetings.as_view(), name='meetings'),
     path('events/$', EventInfo.as_view(), name='eventinfo'),
     path('events/item/<event-id>', EventDetail.as_view(), name='eventdetail'),
-    path('internal-resources', AdditionalResources.as_view(), name='resources'),
+    path('additional-resources', AdditionalResources.as_view(), name='resources'),
     path('test$', test_view, name='homepage2'),
     url(r'^$', HomeView.as_view())
 ]

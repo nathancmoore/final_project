@@ -82,7 +82,7 @@ class EventDetail(DetailView):
 class AdditionalResources(TemplateView):
     """Display links to additional resources."""
 
-    template_name = 'ca_website/resource.html'
+    template_name = 'ca_website/resources.html'
 
     def get_context_data(self, **kwargs):
         context = {}
