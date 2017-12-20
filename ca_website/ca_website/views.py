@@ -50,7 +50,7 @@ class Meetings(ListView):
         context['meeting'] = Meeting.objects.all()
         context['sunday_meetings'] = Meeting.objects.filter(weekday="Sunday")
         context['monday_meetings'] = Meeting.objects.filter(weekday="Monday")
-        context['tuedsay_meetings'] = Meeting.objects.filter(weekday="Tuesday")
+        context['tuesday_meetings'] = Meeting.objects.filter(weekday="Tuesday")
         context['wednesday_meetings'] = Meeting.objects.filter(weekday="Wednesday")
         context['thursday_meetings'] = Meeting.objects.filter(weekday="Thursday")
         context['friday_meetings'] = Meeting.objects.filter(weekday="Friday")
