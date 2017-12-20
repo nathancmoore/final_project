@@ -1,5 +1,5 @@
 .test{
-    background-color: green
+    background-color: green;
 }
 
 .logo{
@@ -11,7 +11,7 @@
 }
 
 .navbtn{
-    font-size: 1em
+    font-size: 1em;
 }
 
 .navlogo{
@@ -48,4 +48,8 @@
 
 #welcome{
     margin-top: 60px;
+}
+
+.event_image{
+    width: 400px;
 }
