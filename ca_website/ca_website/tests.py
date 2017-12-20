@@ -53,37 +53,42 @@ class MeetingsTestCase(TestCase):
         assert response.template_name == 'ca_website/meeting.html'
 
 
-# class EventInfoTestCase(TestCase):
-#     """Tests for the EventInfo view."""
+class EventInfoTestCase(TestCase):
+    """Tests for the EventInfo view."""
 
-#     def setUp(self):
-#         """Setup for the EventInfo view."""
+    def setUp(self):
+        """Setup for the EventInfo view."""
 
-#     def test_home_view_exists(self):
-#         """Test that the EventInfo view exists."""
-#         response = EventInfo()
-#         assert response.template_name == 'ca_website/event.html'
-
-
-# class EventDetailTestCase(TestCase):
-#     """Tests for the EventDetail view."""
-
-#     def setUp(self):
-#         """Setup for the EventDetail view."""
-
-#     def test_home_view_exists(self):
-#         """Test that the EventDetail view exists."""
-#         response = EventDetail()
-#         assert response.template_name == 'ca_website/event_detail.html'
+    def test_home_view_exists(self):
+        """Test that the EventInfo view exists."""
+        response = EventInfo()
+        assert response.template_name == 'ca_website/event.html'
 
 
-# class AdditionalResourcesTestCase(TestCase):
-#     """Tests for the AdditionalResources view."""
+class EventDetailTestCase(TestCase):
+    """Tests for the EventDetail view."""
 
-#     def setUp(self):
-#         """Setup for the AdditionalResources view."""
+    def setUp(self):
+        """Setup for the EventDetail view."""
 
-#     def test_home_view_exists(self):
-#         """Test that the AdditionalResources view exists."""
-#         response = AdditionalResources()
-#         assert response.template_name == 'ca_website/resource.html'
+    def test_home_view_exists(self):
+        """Test that the EventDetail view exists."""
+        response = EventDetail()
+        assert response.template_name == 'ca_website/event_detail.html'
+
+
+class AdditionalResourcesTestCase(TestCase):
+    """Tests for the AdditionalResources view."""
+
+    def setUp(self):
+        """Setup for the AdditionalResources view."""
+
+    def test_home_view_exists(self):
+        """Test that the AdditionalResources view exists."""
+        response = AdditionalResources()
+        assert response.template_name == 'ca_website/resource.html'
+
+    # def test_all_pdfs_are_present(self):
+    #     """Test that the list of pdfs is complete."""
+    #     response = AdditionalResources()
+    #     print(response.pdfs)
