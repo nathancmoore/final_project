@@ -10,14 +10,15 @@
         <a class="btn btn-primary btn-lg" href="#!" role="button">Some action</a>
       </p>
     </div>
-    <!-- <div class="container">
+    <div class="container">
         <div class="row">
             {% for event in events %}
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-block">
+                  <img src="{{ events.event_photo }}" alt="">
                   <h3 class="card-title">{{ events.event_name }}</h3>
-                  <p class="card-text">{{  }}</p>
+                  <p class="card-text">{{ events.event_name }}</p>
                   <a href="#" class="btn btn-primary">Details</a>
                 </div>
               </div>
@@ -25,7 +26,7 @@
             {% endfor %}
             <a href="#" class="btn btn-primary">All Events</a>
         </div>
-    </div> -->
+    </div>
     <div class="container">
         <div class="row">
             {% for meeting in meetings %}
