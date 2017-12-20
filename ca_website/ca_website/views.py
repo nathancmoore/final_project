@@ -72,13 +72,6 @@ class EventInfo(ListView):
         return context
 
 
-class EventDetail(DetailView):
-    """Display one event with details."""
-
-    template_name = 'ca_website/event_detail.html'
-    context_object_name = 'event'
-
-
 class AdditionalResources(TemplateView):
     """Display links to additional resources."""
 
@@ -131,5 +124,17 @@ class MeetingDetail(DetailView):
     def get_context_data(self, **kwargs):
         
         context = super(MeetingDetail, self).get_context_data(**kwargs)
-        # import pdb; pdb.set_trace()
+        return context
+
+
+class EventDetail(DetailView):
+    """Display all data for a single meeting."""
+
+    model = Events
+    template_name = 'ca_website/event_detail.html'
+    context_object_name = 'event'
+
+    def get_context_data(self, **kwargs):
+        
+        context = super(EventDetail, self).get_context_data(**kwargs)
         return context
