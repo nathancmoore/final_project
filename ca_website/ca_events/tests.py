@@ -232,6 +232,7 @@ class EventsFactory(factory.django.DjangoModelFactory):
     zip_code = 44444
     room = "420"
     notes = "These are some sample notes for an event."
+    event_date = None
     last_updated = datetime.datetime.now()
 
 
