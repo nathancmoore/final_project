@@ -67,7 +67,7 @@ class Events(models.Model):
     last_updated = models.DateTimeField(auto_now_add=True, null=True)
     event_date = models.DateTimeField(null=True)
     published = models.BooleanField(default=False)
-    contact_phone = models.CharField(max_length=15, null=True)
+    contact_phone = models.CharField(max_length=15, null=True, blank=True)
 
 
 class InternalResources(models.Model):
