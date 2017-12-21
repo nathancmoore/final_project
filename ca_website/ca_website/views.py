@@ -18,6 +18,7 @@ class HomeView(ListView):
         """Get specific data needed."""
         pac = timezone('US/Pacific-New')
         today = datetime.now()
+        import pdb; pdb.set_trace()
         now = today.astimezone(pac)
         weekday = now.strftime('%A')
         context = super(HomeView, self).get_context_data(**kwargs)
