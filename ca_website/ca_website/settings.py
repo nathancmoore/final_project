@@ -102,7 +102,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # STATIC_URL = '/static/'
 # MEDIA_URL = '/static/MEDIA/'
@@ -118,6 +117,7 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 else:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
     AWS_STORAGE_BUCKET_NAME = 'ca-of-wa'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
