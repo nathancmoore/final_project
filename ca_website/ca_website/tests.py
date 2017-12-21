@@ -1,7 +1,7 @@
 """Tests for our views."""
 
 from django.test import TestCase
-from .views import HomeView, About, Meetings
+from .views import HomeView, About, Meetings, MeetingDetail
 from .views import EventInfo, EventDetail, AdditionalResources
 
 
@@ -14,6 +14,7 @@ class HomeViewTestCase(TestCase):
     def test_home_view_exists(self):
         """Test that the HomeView view exists."""
         response = HomeView()
+
         assert response.template_name == 'ca_website/home.html'
 
 
@@ -39,6 +40,28 @@ class MeetingsTestCase(TestCase):
         """Test that the Meetings view exists."""
         response = Meetings()
         assert response.template_name == 'ca_website/meeting.html'
+
+    def test_home_view_context_object(self):
+        """Test that the Meetings context object is correct."""
+        response = Meetings()
+        assert response.context_object_name == 'meetings'
+
+
+class MeetingDetailTestCase(TestCase):
+    """Tests for the MeetingDetail view."""
+
+    def setUp(self):
+        """Setup for the MeetingDetail view."""
+
+    def test_meeting_detail_view_exists(self):
+        """Test that the MeetingDetail view exists."""
+        response = MeetingDetail()
+        assert response.template_name == 'ca_website/meeting_detail.html'
+
+    def test_meeting_detail_view_context_object(self):
+        """Test that the MeetingDetail context object is correct."""
+        response = MeetingDetail()
+        assert response.context_object_name == 'meeting_1'
 
 
 class EventInfoTestCase(TestCase):
