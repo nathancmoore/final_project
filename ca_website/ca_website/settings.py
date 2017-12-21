@@ -114,7 +114,7 @@ if DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
     MEDIA_ROOT = os.path.join(BASE_DIR, "static/MEDIA")
     STATIC_URL = '/static/'
-    MEDIA_URL = '/STATIC/media/'
+    MEDIA_URL = '/static/media/'
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 else:
