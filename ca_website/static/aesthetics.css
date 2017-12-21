@@ -82,3 +82,19 @@ body {
     background-color: rgb(225, 225, 225);
     border-radius: .2em;
 }
+#containerx {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(225, 225, 225);
+    border-radius: .2em;
+}
+.spiff {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: rgb(135, 135, 135);
+    color: rgb(240, 240, 240);
+    margin-top: 1vh;
+}
