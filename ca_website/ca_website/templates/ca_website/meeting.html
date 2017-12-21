@@ -103,6 +103,22 @@
         </select>
     </div>
 
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2">Explanation of Meeting Symbols</a>
+    <div class="collapse" id="collapseExample2">
+        <ul>
+            <li>BB - Big Book Study</li>
+            <li>C - Closed meeting for those who desire to stop using cocaine and all other mind-altering substances. Newcomers welcome.</li>
+            <li>CL - Candlelight</li>
+            <li>LS - Literature Study</li>
+            <li>MM - Meditation meeting</li>
+            <li>M - Men only</li>
+            <li>NC - No children please</li>
+            <li>SB - Non-smoking, with break</li>
+            <li>W - Women only</li>
+            <li>A - Meeting room accessible by wheelchair</li>
+        </ul>
+    </div>
+
     <h2 class="center sunday">Sunday</h2>
     <div class="container sunday">
         <div class="row">
@@ -111,7 +127,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title ">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
+                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -140,7 +156,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
+                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -169,7 +185,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
+                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -198,7 +214,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
+                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -227,7 +243,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
+                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -256,7 +272,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
+                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
@@ -285,7 +301,7 @@
               <div class="card">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>Meeting Format - {{ meeting.meeting_format }}</p>
+                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
                   <p class="card-text">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
