@@ -103,7 +103,7 @@
         </select>
     </div>
 
-    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2">Explanation of Meeting Symbols</a>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2">Show Meeting Legend.</a>
     <div class="collapse" id="collapseExample2">
         <ul>
             <li>BB - Big Book Study</li>
@@ -123,22 +123,22 @@
     <div class="container sunday">
         <div class="row">
             {% for meeting in sunday_meetings %}
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" id="align">
+              <div class="card" id="border">
                 <div class="card-block">
                   <h3 class="card-title ">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
-                  <p class="card-text">
+                  <p id="inlign">{% if meeting.meeting_format %} {{ meeting.meeting_format }} {% endif %}</p>
+                  <p class="card-text" id="inlign">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
                        ({{ meeting.room }})
                       {% endif %}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.street }}
                   </p>
                   <p class="card-text">
-                      {{ meeting.city }}
+                      {{ meeting.city }} 
                       <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
                   </p>
                 </div>
@@ -152,21 +152,21 @@
     <div class="container monday">
         <div class="row">
             {% for meeting in monday_meetings %}
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" id="align">
+              <div class="card" id="border">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
-                  <p class="card-text">
+                  <p id="inlign">{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
+                  <p class="card-text" id="inlign">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
                        ({{ meeting.room }})
                       {% endif %}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.street }}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.city }}
                       <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
                   </p>
@@ -181,21 +181,21 @@
     <div class="container tuesday">
         <div class="row">
             {% for meeting in tuesday_meetings %}
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" id="align">
+              <div class="card" id="border">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
-                  <p class="card-text">
+                  <p id="inlign">{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
+                  <p class="card-text" id="inlign">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
                        ({{ meeting.room }})
                       {% endif %}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.street }}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.city }}
                       <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
                   </p>
@@ -210,21 +210,21 @@
     <div class="container wednesday">
         <div class="row">
             {% for meeting in wednesday_meetings %}
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" id="align">
+              <div class="card" id="border">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
-                  <p class="card-text">
+                  <p id="inlign">{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
+                  <p class="card-text" id="inlign">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
                        ({{ meeting.room }})
                       {% endif %}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.street }}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.city }}
                       <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
                   </p>
@@ -239,21 +239,21 @@
     <div class="container thursday">
         <div class="row">
             {% for meeting in thursday_meetings %}
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" id="align">
+              <div class="card" id="border">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
-                  <p class="card-text">
+                  <p id="inlign">{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
+                  <p class="card-text" id="inlign">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
                        ({{ meeting.room }})
                       {% endif %}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.street }}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.city }}
                       <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
                   </p>
@@ -268,21 +268,21 @@
     <div class="container friday">
         <div class="row">
             {% for meeting in friday_meetings %}
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" id="align">
+              <div class="card" id="border">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
-                  <p class="card-text">
+                  <p id="inlign">{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
+                  <p class="card-text" id="inlign">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
                        ({{ meeting.room }})
                       {% endif %}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.street }}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.city }}
                       <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
                   </p>
@@ -297,21 +297,21 @@
     <div class="container saturday">
         <div class="row">
             {% for meeting in saturday_meetings %}
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" id="align">
+              <div class="card" id="border">
                 <div class="card-block">
                   <h3 class="card-title">{{ meeting.meeting_name }}</h3> {{ meeting.start_time }}-{{ meeting.end_time }}
-                  <p>{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
-                  <p class="card-text">
+                  <p id="inlign">{% if meeting.meeting_format %} Meeting Format - {{ meeting.meeting_format }} {% endif %}</p>
+                  <p class="card-text" id="inlign">
                       {{ meeting.location_name }}
                       {% if meeting.room %}
                        ({{ meeting.room }})
                       {% endif %}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.street }}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text" id="inlign">
                       {{ meeting.city }}
                       <a href='http://maps.google.com/?daddr={{ meeting.street }},+{{meeting.city}}+WA' target="_blank">Get Directions</a>
                   </p>
@@ -324,25 +324,25 @@
 
     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample">Show Sercive Meetings</a>
     <div class="collapse" id="collapseExample">
-        <h2>Service Meetings</h2>
+        <h2 id="align">Service Meetings</h2>
         <div class='container'>
             <div class='row'>
                 {% for sm in service_meetings%}
-                <div class='col-sm-6'>
-                    <div class="card">
+                <div class='col-sm-6' id="align">
+                    <div class="card" id="border">
                         <div class="card-block">
                             <h3 class="card-title">{{ sm.meeting_name }}</h3> {{ sm.start_time }}-{{ sm.end_time }}
-                            <p class="card-text">
+                            <p class="card-text" id="align">
                             {{ sm.location_name }}
                             {% if sm.room %}
                             ({{ sm.room }})
                             {% endif %}
                             </p>
-                            <p class="card-text">
+                            <p class="card-text" id="align">
                             {{ sm.street }}
                             </p>
                             <p class="card-text">
-                            {{ sm.city }}
+                            {{ sm.city }} 
                             <a href='http://maps.google.com/?daddr={{ sm.street }},+{{sm.city}}+WA' target="_blank">Get Directions</a>
                             </p>
                         </div>
