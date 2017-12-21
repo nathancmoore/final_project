@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ca_website',
     'ca_events',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -100,8 +101,33 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/static/MEDIA/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/static/MEDIA/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
-MEDIA_ROOT = os.path.join(BASE_DIR, "static/MEDIA")
+# MEDIA_ROOT = os.path.join(BASE_DIR, "static/MEDIA")
+
+
+if DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
+    MEDIA_ROOT = os.path.join(BASE_DIR, "static/MEDIA")
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/STATIC/media/'
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+else:
+    AWS_STORAGE_BUCKET_NAME = 'ca-of-wa'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
+
+    STATICFILES_LOCATION = 'static'
+    MEDIAFILES_LOCATION = 'media'
+
+    STATICFILES_STORAGE = 'imagersite.custom_storages.StaticStorage'
+    DEFAULT_FILE_STORAGE = 'imagersite.custom_storages.MediaStorage'
+
+    STATIC_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+    MEDIA_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
