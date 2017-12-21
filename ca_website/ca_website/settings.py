@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ca_website',
     'ca_events',
-    'storages'
+    'storages',
 ]
 
 MIDDLEWARE = [
