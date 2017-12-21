@@ -2,8 +2,8 @@
 from django.views.generic import ListView, DetailView
 # from django.shortcuts import render
 from django.views.generic import TemplateView
-from datetime import datetime
-from pytz import timezone
+# from datetime import datetime
+# from pytz import timezone
 from ca_events.models import Meeting, ServiceMeeting, Events
 
 
@@ -11,19 +11,10 @@ class HomeView(ListView):
     """Display data for splash page."""
 
     template_name = 'ca_website/home.html'
-    context_object_name = 'meetings'
-    model = Meeting
 
     def get_context_data(self, **kwargs):
         """Get specific data needed."""
-        # pac = timezone('US/Pacific-New')
-        today = datetime.now()
-        # import pdb; pdb.set_trace()
-        # now = today.astimezone(pac)
-        # today.replace(tzinfo=timezone.utc).astimezone(tz=pytz.timezone('US/Pacific-New'))
-        weekday = today.strftime('%A')
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['meetings'] = Meeting.objects.filter(weekday=weekday)[:3].all()
         context['events'] = Events.objects.filter(published=True).all()
         return context
 
