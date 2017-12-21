@@ -146,9 +146,7 @@ class EventsFactory(factory.django.DjangoModelFactory):
         model = Events
 
     event_name = "Sample event"
-    weekday = "Monday"
     start_time = "5:00 AM"
-    end_time = "7:00 AM"
     location_name = "Test location"
     street = "999 Rose Ct"
     suite = "987"
