@@ -2,21 +2,19 @@
 {% load static %}
 {% block content %}
     <div class="jumbotron" id="welcome">
-      <h1 class="display-3">Welcome to C.A.</h1>
-        <p>Welcome to Cocaine Anonymous. We are all here for the same reason—our inability to stop using cocaine and all other mind-altering substances. The first step towards solving any problem is admitting that there is a problem.</p>
-        <p>The problem, as we see it, consists of an obsession of the mind and an allergy of the body. The obsession is a continued and irresistible thought of the drugs and the next high. The allergy creates an absolute inability to stop using once we begin.</p>
-        <p>We wish to assure you that there is a solution and that recovery is possible. It begins with abstinence and continues with practicing the Twelve Steps of recovery, one day at a time. Our program, the Twelve Steps of Cocaine Anonymous, is the means by which we move from the problem of addiction to the solution of recovery.</p>
+      <h1 class="display-3" id="cawelcome">Welcome to C.A.</h1>
+        <p id="cawelcomeb">Welcome to Cocaine Anonymous. We are all here for the same reason—our inability to stop using cocaine and all other mind-altering substances. The first step towards solving any problem is admitting that there is a problem.</p>
+        <p id="cawelcomeb">The problem, as we see it, consists of an obsession of the mind and an allergy of the body. The obsession is a continued and irresistible thought of the drugs and the next high. The allergy creates an absolute inability to stop using once we begin.</p>
+        <p id="cawelcomeb">We wish to assure you that there is a solution and that recovery is possible. It begins with abstinence and continues with practicing the Twelve Steps of recovery, one day at a time. Our program, the Twelve Steps of Cocaine Anonymous, is the means by which we move from the problem of addiction to the solution of recovery.</p>
       <p>
         <a class="btn btn-primary btn-lg" href="/" onclick="javascript:void window.open('/static/pdf/What_is_CA.pdf',
     '1420671127636','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=0,top=0');return false;">What is CA?</a>
-        Take our self-test to see if C.A. is right for you
         <a class="btn btn-primary btn-lg" href="/" onclick="javascript:void window.open('/static/pdf/Self-Test.pdf',
-    '1420671127636','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=0,top=0');return false;">Self-Test</a>
-        Ready to get started, find a meeting!
-        <a class="btn btn-primary btn-lg" href="meeting-schedule/" role="button">Find Meeting</a>
+    '1420671127636','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=0,top=0');return false;">Am I An Addict?</a>
+        <a class="btn btn-primary btn-lg" href="meeting-schedule/" role="button">Find A Meeting</a>
       </p>
     </div>
-    <div class="container">
+    <div class="container" id="bordercarousel">
         <div class="row">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" role="listbox">
@@ -33,7 +31,7 @@
                 {% endfor %}
               </div>
             </div>
-            <a href="#" class="btn btn-primary">All Events</a>
+            <a href="{% url 'eventinfo' %}" class="btn btn-primary">All Events</a>
         </div>
     </div>
 {% endblock %}
