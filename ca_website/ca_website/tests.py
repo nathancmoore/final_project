@@ -8,9 +8,6 @@ from .views import EventInfo, EventDetail, AdditionalResources
 class HomeViewTestCase(TestCase):
     """Tests for the HomeView view."""
 
-    def setUp(self):
-        """Setup for the HomeView view."""
-
     def test_home_view_exists(self):
         """Test that the HomeView view exists."""
         response = HomeView()
@@ -21,9 +18,6 @@ class HomeViewTestCase(TestCase):
 class AboutTestCase(TestCase):
     """Tests for the About view."""
 
-    def setUp(self):
-        """Setup for the About view."""
-
     def test_home_view_exists(self):
         """Test that the About view exists."""
         response = About()
@@ -32,9 +26,6 @@ class AboutTestCase(TestCase):
 
 class MeetingsTestCase(TestCase):
     """Tests for the Meetings view."""
-
-    def setUp(self):
-        """Setup for the Meetings view."""
 
     def test_home_view_exists(self):
         """Test that the Meetings view exists."""
@@ -50,9 +41,6 @@ class MeetingsTestCase(TestCase):
 class MeetingDetailTestCase(TestCase):
     """Tests for the MeetingDetail view."""
 
-    def setUp(self):
-        """Setup for the MeetingDetail view."""
-
     def test_meeting_detail_view_exists(self):
         """Test that the MeetingDetail view exists."""
         response = MeetingDetail()
@@ -67,9 +55,6 @@ class MeetingDetailTestCase(TestCase):
 class EventInfoTestCase(TestCase):
     """Tests for the EventInfo view."""
 
-    def setUp(self):
-        """Setup for the EventInfo view."""
-
     def test_home_view_exists(self):
         """Test that the EventInfo view exists."""
         response = EventInfo()
@@ -79,20 +64,19 @@ class EventInfoTestCase(TestCase):
 class EventDetailTestCase(TestCase):
     """Tests for the EventDetail view."""
 
-    def setUp(self):
-        """Setup for the EventDetail view."""
-
     def test_home_view_exists(self):
         """Test that the EventDetail view exists."""
         response = EventDetail()
         assert response.template_name == 'ca_website/event_detail.html'
 
+    def test_event_detail_view_context_object(self):
+        """Test that the EventDetail context object is correct."""
+        response = EventDetail()
+        assert response.context_object_name == 'event'
+
 
 class AdditionalResourcesTestCase(TestCase):
     """Tests for the AdditionalResources view."""
-
-    def setUp(self):
-        """Setup for the AdditionalResources view."""
 
     def test_home_view_exists(self):
         """Test that the AdditionalResources view exists."""
