@@ -53,7 +53,7 @@ class ServiceMeeting(models.Model):
 class Events(models.Model):
     """Event model for CA site."""
 
-    event_photo = models.ImageField(upload_to='')
+    event_photo = models.ImageField(upload_to='', null=True, blank=True)
     event_name = models.CharField(max_length=50)
     start_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
