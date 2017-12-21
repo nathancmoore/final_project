@@ -65,7 +65,6 @@ class EventInfo(ListView):
         """."""
         context = super(EventInfo, self).get_context_data(**kwargs)
         context['events'] = Events.objects.all()
-        import pdb; pdb.set_trace()
         return context
 
 
