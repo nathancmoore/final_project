@@ -23,10 +23,10 @@ class Meeting(models.Model):
     end_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
     street = models.CharField(max_length=250)
-    suite = models.CharField(max_length=150)
+    suite = models.CharField(max_length=150, null=True, blank=True)
     city = models.CharField(max_length=150)
     zip_code = models.IntegerField()
-    room = models.CharField(max_length=100)
+    room = models.CharField(max_length=100, null=True, blank=True)
     notes = models.TextField()
     duration = models.CharField(max_length=200)
     meeting_format = models.CharField(max_length=30)
@@ -42,10 +42,10 @@ class ServiceMeeting(models.Model):
     start_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
     street = models.CharField(max_length=250)
-    suite = models.CharField(max_length=150)
+    suite = models.CharField(max_length=150, null=True, blank=True)
     city = models.CharField(max_length=150)
     zip_code = models.IntegerField()
-    room = models.CharField(max_length=100)
+    room = models.CharField(max_length=100, null=True, blank=True)
     notes = models.TextField()
     last_updated = models.DateTimeField(auto_now_add=True, null=True)
 
@@ -53,31 +53,21 @@ class ServiceMeeting(models.Model):
 class Events(models.Model):
     """Event model for CA site."""
 
-    event_photo = models.ImageField(upload_to='')
+    event_photo = models.ImageField(upload_to='', null=True, blank=True)
     event_name = models.CharField(max_length=50)
-    weekday_choices = [
-        ('sun', 'Sunday'),
-        ('mon', 'Monday'),
-        ('tue', 'Tuesday'),
-        ('wed', 'Wednesday'),
-        ('thu', 'Thursday'),
-        ('fri', 'Friday'),
-        ('sat', 'Saturday'),
-    ]
     start_time = models.CharField(max_length=15)
-    end_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
     street = models.CharField(max_length=250)
-    suite = models.CharField(max_length=150)
+    suite = models.CharField(max_length=150, null=True, blank=True)
     city = models.CharField(max_length=150)
     zip_code = models.IntegerField(null=True)
-    room = models.CharField(max_length=100)
-    notes = models.TextField()
-    accessibility = models.CharField(max_length=150)
+    room = models.CharField(max_length=100, null=True, blank=True)
+    notes = models.TextField(null=True, blank=True)
+    accessibility = models.BooleanField(default=False)
     last_updated = models.DateTimeField(auto_now_add=True, null=True)
     event_date = models.DateTimeField(null=True)
     published = models.BooleanField(default=False)
-    contact_phone = models.CharField(max_length=15, null=True)
+    contact_phone = models.CharField(max_length=15, null=True, blank=True)
 
 
 class InternalResources(models.Model):
