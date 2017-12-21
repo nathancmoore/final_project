@@ -126,8 +126,8 @@ else:
     STATICFILES_LOCATION = 'static'
     MEDIAFILES_LOCATION = 'media'
 
-    STATICFILES_STORAGE = 'imagersite.custom_storages.StaticStorage'
-    DEFAULT_FILE_STORAGE = 'imagersite.custom_storages.MediaStorage'
+    STATICFILES_STORAGE = 'ca_website.custom_storages.StaticStorage'
+    DEFAULT_FILE_STORAGE = 'ca_website.custom_storages.MediaStorage'
 
     STATIC_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
     MEDIA_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
