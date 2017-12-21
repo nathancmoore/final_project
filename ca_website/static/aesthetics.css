@@ -1,0 +1,35 @@
+.btn {
+    background-color: rgb(91, 195, 255);
+    display: block;
+    width: 70vw;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+body {
+    background-color: rgb(235, 235, 235);
+}
+#align {
+    text-align: center;
+}
+#inlign {
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+.card-title {
+    font-size: 7vw;
+    font-weight: 360;
+}
+#border {
+    margin-bottom: 1vh;
+    border: none;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    border-color: black;
+    background-color: rgb(225, 225, 225);
+}
+.card-text {
+    font-size: 2vh;
+}
