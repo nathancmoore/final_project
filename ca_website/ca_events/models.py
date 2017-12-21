@@ -55,17 +55,7 @@ class Events(models.Model):
 
     event_photo = models.ImageField(upload_to='')
     event_name = models.CharField(max_length=50)
-    weekday_choices = [
-        ('sun', 'Sunday'),
-        ('mon', 'Monday'),
-        ('tue', 'Tuesday'),
-        ('wed', 'Wednesday'),
-        ('thu', 'Thursday'),
-        ('fri', 'Friday'),
-        ('sat', 'Saturday'),
-    ]
     start_time = models.CharField(max_length=15)
-    end_time = models.CharField(max_length=15)
     location_name = models.CharField(max_length=150)
     street = models.CharField(max_length=250)
     suite = models.CharField(max_length=150)
@@ -73,7 +63,7 @@ class Events(models.Model):
     zip_code = models.IntegerField(null=True)
     room = models.CharField(max_length=100)
     notes = models.TextField()
-    accessibility = models.CharField(max_length=150)
+    accessibility = models.BooleanField(default=False)
     last_updated = models.DateTimeField(auto_now_add=True, null=True)
     event_date = models.DateTimeField(null=True)
     published = models.BooleanField(default=False)
