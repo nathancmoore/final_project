@@ -88,7 +88,7 @@ class AdditionalResourcesTestCase(TestCase):
         response = AdditionalResources()
         assert response.template_name == 'ca_website/resource.html'
 
-    # def test_all_pdfs_are_present(self):
-    #     """Test that the list of pdfs is complete."""
-    #     response = AdditionalResources()
-    #     print(response.pdfs)
+    def test_all_pdfs_are_present(self):
+        """Test that the list of pdfs is complete."""
+        response = AdditionalResources()
+        assert len(response.pdfs) == 25

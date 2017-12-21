@@ -2,8 +2,7 @@
 
 from __future__ import unicode_literals
 from django.test import TestCase
-from .models import Meeting, ServiceMeeting
-from .models import InternalResources, Events
+from .models import Meeting, ServiceMeeting, Events
 import factory
 import datetime
 
@@ -136,43 +135,6 @@ class ServiceMeetingTestCase(TestCase):
     def tearDown(self):
         """Delete the test object when done."""
         ServiceMeeting.objects.get(meeting_name="Service Meeting").delete()
-
-
-class InternalResourcesFactory(factory.django.DjangoModelFactory):
-    """Factory for InternalResources objects to test."""
-
-    class Meta:
-        """Meta class."""
-
-        model = InternalResources
-
-    name = "Test name"
-    description = "Test description"
-    # upload = models.URLField()
-
-
-class InternalResourcesTestCase(TestCase):
-    """Tests for the InternalResources class."""
-
-    def setUp(self):
-        """Setup for the InternalResources class tests."""
-        self.er = InternalResourcesFactory.create()
-        self.er.save()
-
-    def test_internal_resources_object_exists(self):
-        """Test that the InternalResources object exists."""
-        er = InternalResources.objects.get(name='Test name')
-        assert er
-
-    def test_attributes(self):
-        """Test the InternalResources object's properties."""
-        er = InternalResources.objects.get(name='Test name')
-        assert er.description == "Test description"
-        assert er.name == "Test name"
-
-    def tearDown(self):
-        """Delete the test object when done."""
-        InternalResources.objects.get(name="Test name").delete()
 
 
 class EventsFactory(factory.django.DjangoModelFactory):
