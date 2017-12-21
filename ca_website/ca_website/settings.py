@@ -15,7 +15,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['ec2-34-216-126-115.us-west-2.compute.amazonaws.com', 'localhost', '127.0.0.1']
 
@@ -110,7 +110,7 @@ USE_TZ = True
 
 
 if DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, "static")
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
     MEDIA_ROOT = os.path.join(BASE_DIR, "static/MEDIA")
     STATIC_URL = '/static/'
     MEDIA_URL = '/static/media/'
