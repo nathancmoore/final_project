@@ -7,49 +7,33 @@
         <p>The problem, as we see it, consists of an obsession of the mind and an allergy of the body. The obsession is a continued and irresistible thought of the drugs and the next high. The allergy creates an absolute inability to stop using once we begin.</p>
         <p>We wish to assure you that there is a solution and that recovery is possible. It begins with abstinence and continues with practicing the Twelve Steps of recovery, one day at a time. Our program, the Twelve Steps of Cocaine Anonymous, is the means by which we move from the problem of addiction to the solution of recovery.</p>
       <p>
+        <a class="btn btn-primary btn-lg" href="/" onclick="javascript:void window.open('/static/pdf/What_is_CA.pdf',
+    '1420671127636','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=0,top=0');return false;">What is CA?</a>
         Take our self-test to see if C.A. is right for you
-        <a class="btn btn-primary btn-lg" href="#!" role="button">Self-Test</a>
+        <a class="btn btn-primary btn-lg" href="/" onclick="javascript:void window.open('/static/pdf/Self-Test.pdf',
+    '1420671127636','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=0,top=0');return false;">Self-Test</a>
         Ready to get started, find a meeting!
-        <a class="btn btn-primary btn-lg" href="#!" role="button">Find Meeting</a>
+        <a class="btn btn-primary btn-lg" href="meeting-schedule/" role="button">Find Meeting</a>
       </p>
     </div>
     <div class="container">
         <div class="row">
-            {% for event in events %}
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-block">
-                  <img class="event_image" src="{{ event.event_photo.url }}">
-                  <h3 class="card-title">{{ event.event_name }}</h3>
-                  <p class="card-text">{{ event.event_name }}</p>
-                  <a href="#" class="btn btn-primary">Details</a>
-                </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                {% for event in events %}
+                  {% if forloop.last %}
+                  <div class="carousel-item active">
+                    <img class="d-block img-fluid" src="{{ event.event_photo.url }}">
+                  </div>
+                  {% else %}
+                  <div class="carousel-item">
+                    <img class="d-block img-fluid" src="{{ event.event_photo.url }}">
+                  </div>
+                  {% endif %}
+                {% endfor %}
               </div>
             </div>
-            {% endfor %}
             <a href="#" class="btn btn-primary">All Events</a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            {% for meeting in meetings %}
-            <!-- meeting name, meeting day, meeting time -->
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-block">
-                  <h3 class="card-title">{{ meeting.meeting_name }}</h3>
-                  <p class="card-text">
-                      {{ meeting.weekday }}, {{ meeting.start_time }}
-                  </p>
-                  <p class="card-text">
-                      {{ meeting.location_name }}
-                  </p>
-                  <a href="#" class="btn btn-primary">Details</a>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-            <a href="#" class="btn btn-primary">All Meetings</a>
         </div>
     </div>
 {% endblock %}

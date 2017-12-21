@@ -21,8 +21,8 @@ class HomeView(ListView):
         now = today.astimezone(pac)
         weekday = now.strftime('%A')
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['meetings'] = Meeting.objects.filter(weekday=weekday)[:3]
-        context['events'] = Events.objects.filter(published=True)
+        context['meetings'] = Meeting.objects.filter(weekday=weekday)[:3].all()
+        context['events'] = Events.objects.filter(published=True).all()
         return context
 
 
