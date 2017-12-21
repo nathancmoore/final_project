@@ -15,7 +15,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
-DEBUG = bool(eval(os.environ.get('DEBUG', 'False')))
+DEBUG = bool(eval(os.environ.get('DEBUG', False)))
 
 ALLOWED_HOSTS = ['ec2-34-216-126-115.us-west-2.compute.amazonaws.com', 'localhost', '127.0.0.1']
 
