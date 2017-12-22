@@ -90,6 +90,8 @@ body {
     margin-right: auto;
     background-color: rgb(225, 225, 225);
     border-radius: .2em;
+    margin-top: 7vh;
+    text-align: center;
 }
 .spiff {
     border-top: 2px solid black;
@@ -98,7 +100,10 @@ body {
     color: rgb(240, 240, 240);
     margin-top: 1vh;
 }
-@media (max-width: 10024px) {
+.list-group-item {
+    background-color: rgb(135, 135, 135);
+}
+@media (min-width: 10024px) {
     #cawelcome {
         font-size: 6vw;
     }
