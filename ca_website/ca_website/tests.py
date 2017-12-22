@@ -93,19 +93,11 @@ class AdditionalResourcesTestCase(TestCase):
         assert len(response.pdfs) == 25
 
 
-class SelTest1(TestCase):
+class TestMeeting(TestCase):
     """."""
     driver = webdriver.Firefox()
     driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/")
     cards = driver.find_elements(By.CLASS_NAME, "card-block")
-    # pdb.set_trace()
-    # sunday = driver.find_elements(By.CLASS_NAME, "sunday")[1]
-    # monday = driver.find_elements(By.CLASS_NAME, "monday")[1]
-    # tuesday = driver.find_elements(By.CLASS_NAME, "tuesday")[1]
-    # wednesday = driver.find_elements(By.CLASS_NAME, "wednesday")[1]
-    # thursday = driver.find_elements(By.CLASS_NAME, "thursday")[1]
-    # friday = driver.find_elements(By.CLASS_NAME, "friday")[1]
-    # saturday = driver.find_elements(By.CLASS_NAME, "saturday")[1]
 
     def test_card_1(self):
         """."""
@@ -139,6 +131,63 @@ class SelTest1(TestCase):
         """."""
         assert "Blind Benders" in self.cards[7].text
 
+    def test_card_9(self):
+        """."""
+        assert "Kenmore Keystone" in self.cards[8].text
+
+    def test_card_10(self):
+        """."""
+        assert "Misfits" in self.cards[9].text
+
     def test_number_of_meetings(self):
         """."""
         assert len(self.cards) == 56
+
+
+class TestHomePage(TestCase):
+    """."""
+
+    driver = webdriver.Firefox()
+    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/")
+    buttons = driver.find_elements(By.CLASS_NAME, "btn-primary")
+    nav = driver.find_elements(By.CLASS_NAME, "nav-link")
+
+    def test_num_buttons(self):
+        """."""
+        assert len(self.buttons) == 4
+
+    def test_button_link_1(self):
+        """."""
+        assert self.buttons[0].get_property('href') == "https://ca-of-wa.s3.amazonaws.com/static/pdf/What_is_CA.pdf"
+
+    def test_button_link_2(self):
+        """."""
+        assert self.buttons[1].get_property('href') == "https://ca-of-wa.s3.amazonaws.com/static/pdf/Self-Test.pdf"
+
+    def test_button_link_3(self):
+        """."""
+        assert self.buttons[2].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/"
+
+    def test_button_link_4(self):
+        """."""
+        assert self.buttons[3].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/events/"
+
+    def test_nav_link_1(self):
+        """."""
+        assert self.nav[0].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/"
+
+    def test_nav_link_2(self):
+        """."""
+        assert self.nav[1].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/about-ca/"
+
+    def test_nav_link_3(self):
+        """."""
+        assert self.nav[2].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/"
+
+    def test_nav_link_4(self):
+        """."""
+        assert self.nav[3].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/events/"
+
+    def test_nav_link_5(self):
+        """."""
+        assert self.nav[4].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/additional-resources"
