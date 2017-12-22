@@ -144,6 +144,110 @@ class TestMeeting(TestCase):
         assert len(self.cards) == 56
 
 
+
+class SelTest2(TestCase):
+    """Selenium tests for Chrome."""
+    driver = webdriver.Firefox()
+    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/events/")
+    cards = driver.find_elements(By.CLASS_NAME, "dropdown")
+
+    def test_event_1(self):
+        """Test that first event has title."""
+        assert "No Blow Bonanza" in self.cards[0].text
+
+    def test_event_2(self):
+        """Test for second event."""
+        assert "District 3 Principles of Recovery Workshop" in self.cards[1].text
+
+    def test_event_3(self):
+        """Test third event is there."""
+        assert "The Fix" in self.cards[2].text
+
+    def test_event_4(self):
+        """Test fourth event is there."""
+        assert "The Dark Side of the Spoon" in self.cards[3].text
+
+    def test_event_5(self):
+        """Test fifth event is there."""
+        assert "Misfit's Monday Madness Taco Feed" in self.cards[4].text
+
+    def test_event_6(self):
+        """Test sixth event is there."""
+        assert "Women Adore Recovery" in self.cards[5].text
+
+
+class SelTest3(TestCase):
+    """Selenium tests for Chrome."""
+    driver = webdriver.Chrome()
+    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/")
+    cards = driver.find_elements(By.CLASS_NAME, "card-block")
+
+    def test_card_1(self):
+        """."""
+        assert "Blues Brothers" in self.cards[0].text
+
+    def test_card_2(self):
+        """."""
+        assert "Wolfpack" in self.cards[1].text
+
+    def test_card_3(self):
+        """."""
+        assert "The Club House" in self.cards[2].text
+
+    def test_card_4(self):
+        """."""
+        assert "Good Clean Fun" in self.cards[3].text
+
+    def test_card_5(self):
+        """."""
+        assert "Blade Runners" in self.cards[4].text
+
+    def test_card_6(self):
+        """."""
+        assert "New Found Freedom" in self.cards[5].text
+
+    def test_card_7(self):
+        """."""
+        assert "Recovery Related" in self.cards[6].text
+
+    def test_card_8(self):
+        """."""
+        assert "Blind Benders" in self.cards[7].text
+
+    def test_number_of_meetings_chrome(self):
+        """."""
+        assert len(self.cards) == 56
+
+
+class SelTest4(TestCase):
+    """Selenium tests for Chrome."""
+    driver = webdriver.Chrome()
+    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/events/")
+    cards = driver.find_elements(By.CLASS_NAME, "dropdown")
+
+    def test_event_1(self):
+        """Test that first event has title."""
+        assert "No Blow Bonanza" in self.cards[0].text
+
+    def test_event_2(self):
+        """Test for second event."""
+        assert "District 3 Principles of Recovery Workshop" in self.cards[1].text
+
+    def test_event_3(self):
+        """Test third event is there."""
+        assert "The Fix" in self.cards[2].text
+
+    def test_event_4(self):
+        """Test fourth event is there."""
+        assert "The Dark Side of the Spoon" in self.cards[3].text
+
+    def test_event_5(self):
+        """Test fifth event is there."""
+        assert "Misfit's Monday Madness Taco Feed" in self.cards[4].text
+
+    def test_event_6(self):
+        """Test sixth event is there."""
+
 class TestHomePage(TestCase):
     """."""
 
@@ -191,3 +295,4 @@ class TestHomePage(TestCase):
     def test_nav_link_5(self):
         """."""
         assert self.nav[4].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/additional-resources"
+
