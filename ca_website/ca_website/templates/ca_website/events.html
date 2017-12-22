@@ -9,10 +9,6 @@
               {% if event.event_photo %}
               <img class="event_image" src="{{ event.event_photo.url }}">
               {% endif %}
-              <h3 class="card-title">{{ event.event_name }}</h3>
-              <p class="card-text">{{ event.notes }}</p>
-              <p class="card-text">{{ event.location_name }}, {{ event.event_date }}, {{ event.start_time }} 
-              </p> -->
               <div class="dropdown">
                   <h3 class="card-title" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ event.event_name }}
