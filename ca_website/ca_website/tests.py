@@ -3,6 +3,9 @@
 from django.test import TestCase
 from .views import HomeView, About, Meetings, MeetingDetail
 from .views import EventInfo, EventDetail, AdditionalResources
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+import pdb
 
 
 class HomeViewTestCase(TestCase):
@@ -87,3 +90,11 @@ class AdditionalResourcesTestCase(TestCase):
         """Test that the list of pdfs is complete."""
         response = AdditionalResources()
         assert len(response.pdfs) == 25
+
+
+class SelTest1(TestCase):
+    """."""
+
+    driver = webdriver.Firefox()
+    driver.get("http://www.google.com")
+    pdb.set_trace()
