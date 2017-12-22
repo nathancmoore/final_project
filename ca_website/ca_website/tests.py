@@ -98,6 +98,8 @@ class SelTest1(TestCase):
     driver = webdriver.Firefox()
     driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/")
     cards = driver.find_elements(By.CLASS_NAME, "card-block")
+    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/about-ca/")
+
     # pdb.set_trace()
     # sunday = driver.find_elements(By.CLASS_NAME, "sunday")[1]
     # monday = driver.find_elements(By.CLASS_NAME, "monday")[1]
