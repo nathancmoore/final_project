@@ -98,3 +98,11 @@ body {
     color: rgb(240, 240, 240);
     margin-top: 1vh;
 }
+@media (max-width: 10024px) {
+    #cawelcome {
+        font-size: 6vw;
+    }
+    #cawelcome {
+        font-size: 5vw;
+    }   
+}
