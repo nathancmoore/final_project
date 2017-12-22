@@ -5,6 +5,7 @@ from .views import HomeView, About, Meetings, MeetingDetail
 from .views import EventInfo, EventDetail, AdditionalResources
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
 import pdb
 
 
@@ -94,7 +95,50 @@ class AdditionalResourcesTestCase(TestCase):
 
 class SelTest1(TestCase):
     """."""
-
     driver = webdriver.Firefox()
     driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/")
-    pdb.set_trace()
+    cards = driver.find_elements(By.CLASS_NAME, "card-block")
+    # pdb.set_trace()
+    # sunday = driver.find_elements(By.CLASS_NAME, "sunday")[1]
+    # monday = driver.find_elements(By.CLASS_NAME, "monday")[1]
+    # tuesday = driver.find_elements(By.CLASS_NAME, "tuesday")[1]
+    # wednesday = driver.find_elements(By.CLASS_NAME, "wednesday")[1]
+    # thursday = driver.find_elements(By.CLASS_NAME, "thursday")[1]
+    # friday = driver.find_elements(By.CLASS_NAME, "friday")[1]
+    # saturday = driver.find_elements(By.CLASS_NAME, "saturday")[1]
+
+    def test_card_1(self):
+        """."""
+        assert "Blues Brothers" in self.cards[0].text
+
+    def test_card_2(self):
+        """."""
+        assert "Wolfpack" in self.cards[1].text
+
+    def test_card_3(self):
+        """."""
+        assert "The Club House" in self.cards[2].text
+
+    def test_card_4(self):
+        """."""
+        assert "Good Clean Fun" in self.cards[3].text
+
+    def test_card_5(self):
+        """."""
+        assert "Blade Runners" in self.cards[4].text
+
+    def test_card_6(self):
+        """."""
+        assert "New Found Freedom" in self.cards[5].text
+
+    def test_card_7(self):
+        """."""
+        assert "Recovery Related" in self.cards[6].text
+
+    def test_card_8(self):
+        """."""
+        assert "Blind Benders" in self.cards[7].text
+
+    def test_number_of_meetings(self):
+        """."""
+        assert len(self.cards) == 56
