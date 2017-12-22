@@ -7,7 +7,7 @@ from django.views.generic import TemplateView
 from ca_events.models import Meeting, ServiceMeeting, Events
 
 
-class HomeView(ListView):
+class HomeView(TemplateView):
     """Display data for splash page."""
 
     template_name = 'ca_website/home.html'
