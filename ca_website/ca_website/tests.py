@@ -96,5 +96,5 @@ class SelTest1(TestCase):
     """."""
 
     driver = webdriver.Firefox()
-    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/events/")
+    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/")
     pdb.set_trace()
