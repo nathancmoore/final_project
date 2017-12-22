@@ -103,7 +103,7 @@ body {
 .list-group-item {
     background-color: rgb(135, 135, 135);
 }
-@media (min-width: 10024px) {
+@media screen and (min-width: 10024px) {
     #cawelcome {
         font-size: 6vw;
     }
