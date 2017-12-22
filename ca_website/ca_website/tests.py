@@ -144,7 +144,6 @@ class TestMeeting(TestCase):
         assert len(self.cards) == 56
 
 
-
 class SelTest2(TestCase):
     """Selenium tests for Chrome."""
     driver = webdriver.Firefox()
@@ -248,9 +247,9 @@ class SelTest4(TestCase):
     def test_event_6(self):
         """Test sixth event is there."""
 
+
 class TestHomePage(TestCase):
     """."""
-
     driver = webdriver.Firefox()
     driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/")
     buttons = driver.find_elements(By.CLASS_NAME, "btn-primary")
@@ -296,3 +295,50 @@ class TestHomePage(TestCase):
         """."""
         assert self.nav[4].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/additional-resources"
 
+
+class TestHomePageChrome(TestCase):
+    """."""
+    driver = webdriver.Chrome()
+    driver.get("http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/")
+    buttons = driver.find_elements(By.CLASS_NAME, "btn-primary")
+    nav = driver.find_elements(By.CLASS_NAME, "nav-link")
+
+    def test_num_buttons(self):
+        """."""
+        assert len(self.buttons) == 4
+
+    def test_button_link_1(self):
+        """."""
+        assert self.buttons[0].get_property('href') == "https://ca-of-wa.s3.amazonaws.com/static/pdf/What_is_CA.pdf"
+
+    def test_button_link_2(self):
+        """."""
+        assert self.buttons[1].get_property('href') == "https://ca-of-wa.s3.amazonaws.com/static/pdf/Self-Test.pdf"
+
+    def test_button_link_3(self):
+        """."""
+        assert self.buttons[2].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/"
+
+    def test_button_link_4(self):
+        """."""
+        assert self.buttons[3].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/events/"
+
+    def test_nav_link_1(self):
+        """."""
+        assert self.nav[0].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/"
+
+    def test_nav_link_2(self):
+        """."""
+        assert self.nav[1].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/about-ca/"
+
+    def test_nav_link_3(self):
+        """."""
+        assert self.nav[2].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/meeting-schedule/"
+
+    def test_nav_link_4(self):
+        """."""
+        assert self.nav[3].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/events/"
+
+    def test_nav_link_5(self):
+        """."""
+        assert self.nav[4].get_property('href') == "http://ec2-34-216-126-115.us-west-2.compute.amazonaws.com/additional-resources"
