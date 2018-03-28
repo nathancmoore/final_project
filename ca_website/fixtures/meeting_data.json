@@ -46,6 +46,28 @@
     },
     {
         "model": "ca_events.Meeting",
+        "pk": 57,
+        "fields": {
+            "district": 1,
+            "meeting_name": "Recovery Related",
+            "weekday": "Sunday",
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "location_name": "Skagit Valley Reach Center",
+            "street": "1413 E College Way",
+            "suite": "",
+            "city": "Mount Vernon",
+            "zip_code": 98273,
+            "room": "",
+            "notes": "Rear building",
+            "duration": 60,
+            "meeting_format": "",
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Meeting",
         "pk": 3,
         "fields": {
             "district": 2,
@@ -156,28 +178,6 @@
     },
     {
         "model": "ca_events.Meeting",
-        "pk": 8,
-        "fields": {
-            "district": 3,
-            "meeting_name": "Blind Benders",
-            "weekday": "Monday",
-            "start_time": "7:00 PM",
-            "end_time": "8:00 PM",
-            "location_name": "Bethel Lutheran Church",
-            "street": "17529 15th Ave NE",
-            "suite": "",
-            "city": "Shoreline",
-            "zip_code": 98155,
-            "room": "Main Room - Basement",
-            "notes": "",
-            "duration": 60,
-            "meeting_format": "CL, LS",
-            "accessibility": "false",
-            "last_updated": "2017-12-19 16:34:12.147469-05"
-        }
-    },
-    {
-        "model": "ca_events.Meeting",
         "pk": 9,
         "fields": {
             "district": 3,
@@ -281,28 +281,6 @@
             "room": "",
             "notes": "Use Back Entrance",
             "duration": 75,
-            "meeting_format": "SB",
-            "accessibility": "true",
-            "last_updated": "2017-12-19 16:34:12.147469-05"
-        }
-    },
-    {
-        "model": "ca_events.Meeting",
-        "pk": 14,
-        "fields": {
-            "district": 3,
-            "meeting_name": "We Can Recover",
-            "weekday": "Tuesday",
-            "start_time": "10:00 AM",
-            "end_time": "11:00 AM",
-            "location_name": "VA Medical Center - Building 24",
-            "street": "1660 South Columbian Way",
-            "suite": "",
-            "city": "Seattle",
-            "zip_code": 98108,
-            "room": "",
-            "notes": "Open to non-VA members",
-            "duration": 60,
             "meeting_format": "",
             "accessibility": "true",
             "last_updated": "2017-12-19 16:34:12.147469-05"
@@ -404,7 +382,7 @@
             "meeting_name": "Spiritual Lines",
             "weekday": "Tuesday",
             "start_time": "7:30 PM",
-            "end_time": "8:30 PM",
+            "end_time": "9:00 PM",
             "location_name": "Lynnwood Alano Club",
             "street": "4001 198th St SW",
             "suite": "6",
@@ -412,8 +390,30 @@
             "zip_code": 98036,
             "room": "",
             "notes": "Pizza & Root Beer Floats on the Last Tuesday of the Month at 6:30 p.m.",
-            "duration": 60,
+            "duration": 90,
             "meeting_format": "CL, SB",
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Meeting",
+        "pk": 51,
+        "fields": {
+            "district": 3,
+            "meeting_name": "No Caine No Paine",
+            "weekday": "Tuesday",
+            "start_time": "7:30 PM",
+            "end_time": "8:45 PM",
+            "location_name": "United Churches",
+            "street": "110 11th Ave SE",
+            "suite": "",
+            "city": "Olympia",
+            "zip_code": 98501,
+            "room": "",
+            "notes": "",
+            "duration": 75,
+            "meeting_format": "",
             "accessibility": "true",
             "last_updated": "2017-12-19 16:34:12.147469-05"
         }
@@ -459,6 +459,50 @@
             "duration": 60,
             "meeting_format": "",
             "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Meeting",
+        "pk": 52,
+        "fields": {
+            "district": 1,
+            "meeting_name": "Lost No More",
+            "weekday": "Wednesday",
+            "start_time": "6:00 PM",
+            "end_time": "7:00 PM",
+            "location_name": "",
+            "street": "701 East Fairhaven Ave",
+            "suite": "",
+            "city": "Burlington",
+            "zip_code": 98233,
+            "room": "",
+            "notes": "",
+            "duration": 60,
+            "meeting_format": "C, CL, W",
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Meeting",
+        "pk": 53,
+        "fields": {
+            "district": 2,
+            "meeting_name": "Hope Fiends",
+            "weekday": "Wednesday",
+            "start_time": "6:00 PM",
+            "end_time": "6:45 PM",
+            "location_name": "Recovery Center Gifts and Coins",
+            "street": "3602 Colby Ave",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98201,
+            "room": "",
+            "notes": "Use Alley Entrance",
+            "duration": 45,
+            "meeting_format": "",
+            "accessibility": "false",
             "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
@@ -535,8 +579,8 @@
             "district": 3,
             "meeting_name": "To Any Length",
             "weekday": "Wednesday",
-            "start_time": "7:45 PM",
-            "end_time": "8:45 PM",
+            "start_time": "7:30 PM",
+            "end_time": "8:30 PM",
             "location_name": "Church of the Nazarene",
             "street": "850 Union Ave NE",
             "suite": "",
@@ -545,7 +589,7 @@
             "room": "",
             "notes": "",
             "duration": 60,
-            "meeting_format": "",
+            "meeting_format": "BB",
             "accessibility": "true",
             "last_updated": "2017-12-19 16:34:12.147469-05"
         }
@@ -613,28 +657,6 @@
             "duration": 60,
             "meeting_format": "",
             "accessibility": "true",
-            "last_updated": "2017-12-19 16:34:12.147469-05"
-        }
-    },
-    {
-        "model": "ca_events.Meeting",
-        "pk": 29,
-        "fields": {
-            "district": 1,
-            "meeting_name": "Lost No More",
-            "weekday": "Thursday",
-            "start_time": "6:00 PM",
-            "end_time": "7:00 PM",
-            "location_name": "",
-            "street": "701 East Fairhaven Ave",
-            "suite": "",
-            "city": "Burlington",
-            "zip_code": 98233,
-            "room": "",
-            "notes": "Rear building",
-            "duration": 60,
-            "meeting_format": "C, CL, W",
-            "accessibility": "false",
             "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
@@ -910,7 +932,7 @@
             "meeting_name": "Richmond Beach CA",
             "weekday": "Friday",
             "start_time": "8:00 PM",
-            "end_time": "9:00 PM",
+            "end_time": "9:10 PM",
             "location_name": "First Lutheran Church of Richmond Beach",
             "street": "18354 8th Ave NW",
             "suite": "",
@@ -918,7 +940,7 @@
             "zip_code": 98177,
             "room": "Upstairs",
             "notes": "",
-            "duration": 60,
+            "duration": 70,
             "meeting_format": "MM",
             "accessibility": "false",
             "last_updated": "2017-12-19 16:34:12.147469-05"
@@ -941,7 +963,29 @@
             "room": "",
             "notes": "",
             "duration": 60,
-            "meeting_format": "MM",
+            "meeting_format": "",
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Meeting",
+        "pk": 56,
+        "fields": {
+            "district": 1,
+            "meeting_name": "Recovery Related",
+            "weekday": "Saturday",
+            "start_time": "12:00 PM",
+            "end_time": "1:00 PM",
+            "location_name": "Skagit Valley Reach Center",
+            "street": "1413 E College Way",
+            "suite": "",
+            "city": "Mount Vernon",
+            "zip_code": 98273,
+            "room": "",
+            "notes": "Rear building",
+            "duration": 60,
+            "meeting_format": "",
             "accessibility": "true",
             "last_updated": "2017-12-19 16:34:12.147469-05"
         }
@@ -986,6 +1030,50 @@
             "notes": "",
             "duration": 75,
             "meeting_format": "NC, W",
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Meeting",
+        "pk": 54,
+        "fields": {
+            "district": 2,
+            "meeting_name": "Sober Mayhem",
+            "weekday": "Saturday",
+            "start_time": "4:00 PM",
+            "end_time": "5:00 PM",
+            "location_name": "Recovery Center Gifts and Coins",
+            "street": "3602 Colby Ave",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98201,
+            "room": "",
+            "notes": "Use Alley Entrance",
+            "duration": 60,
+            "meeting_format": "",
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Meeting",
+        "pk": 55,
+        "fields": {
+            "district": 3,
+            "meeting_name": "No Caine No Paine",
+            "weekday": "Saturday",
+            "start_time": "7:30 PM",
+            "end_time": "8:45 PM",
+            "location_name": "United Churches",
+            "street": "110 11th Ave SE",
+            "suite": "",
+            "city": "Olympia",
+            "zip_code": 98501,
+            "room": "",
+            "notes": "",
+            "duration": 75,
+            "meeting_format": "",
             "accessibility": "true",
             "last_updated": "2017-12-19 16:34:12.147469-05"
         }
@@ -1052,28 +1140,6 @@
             "notes": "Potluck and Speaker on the Third Saturday of the Month",
             "duration": 60,
             "meeting_format": "CL, SB",
-            "accessibility": "true",
-            "last_updated": "2017-12-19 16:34:12.147469-05"
-        }
-    },
-    {
-        "model": "ca_events.Meeting",
-        "pk": 49,
-        "fields": {
-            "district": 1,
-            "meeting_name": "Recovery Related's Nocturnal Fix",
-            "weekday": "Saturday",
-            "start_time": "10:00 PM",
-            "end_time": "11:00 PM",
-            "location_name": "Phoenix Recovery Services",
-            "street": "1601 E College Way",
-            "suite": "",
-            "city": "Mount Vernon",
-            "zip_code": 98273,
-            "room": "",
-            "notes": "",
-            "duration": 60,
-            "meeting_format": "CL",
             "accessibility": "true",
             "last_updated": "2017-12-19 16:34:12.147469-05"
         }
