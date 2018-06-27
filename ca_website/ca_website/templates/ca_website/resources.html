@@ -3,17 +3,13 @@
 {% load static %}
 
 <div class='cleartop'>
+<!-- <div> -->
     <h2>Pamphlets</h2>
     {% for pdf in pdfs %}
     <!-- <p><a href="/" onclick="javascript:void window.open('{{ pdf.1 }}',
     '1420671127636','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=0,top=0');return false;">{{ pdf.0 }}</a></p> -->
      <p><a href='{% static pdf.1 %}' target="_blank">{{ pdf.0 }}</a></p>
     {% endfor %}
-</div>
-
-<div>
-    <p>Can you see me?</p>
-    <a href="{% static 'pdf/12_Principles.pdf' %}" target="_blank">click here</a>
 </div>
 
 <div class='cleartop'>

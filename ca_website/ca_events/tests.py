@@ -146,9 +146,7 @@ class EventsFactory(factory.django.DjangoModelFactory):
         model = Events
 
     event_name = "Sample event"
-    weekday = "Monday"
     start_time = "5:00 AM"
-    end_time = "7:00 AM"
     location_name = "Test location"
     street = "999 Rose Ct"
     suite = "987"
@@ -156,8 +154,11 @@ class EventsFactory(factory.django.DjangoModelFactory):
     zip_code = 44444
     room = "420"
     notes = "These are some sample notes for an event."
+    accessibility = True
     event_date = None
     last_updated = datetime.datetime.now()
+    published = False
+    contact_phone = "999-123-4567"
 
 
 class EventsTestCase(TestCase):
@@ -172,6 +173,27 @@ class EventsTestCase(TestCase):
         """Test that the Events object exists."""
         test_event = Events.objects.get(event_name="Sample event")
         assert test_event
+
+    def test_location_attributes(self):
+        """Test the Events object's location properties."""
+        test_event = Events.objects.get(event_name="Sample event")
+        assert test_event.location_name == "Test location"
+        assert test_event.street == "999 Rose Ct"
+        assert test_event.suite == "987"
+        assert test_event.city == "Olympia"
+        assert test_event.zip_code == 44444
+        assert test_event.room == "420"
+
+    def test_time_attributes(self):
+        """Test the Events object's time properties."""
+        test_event = Events.objects.get(event_name="Sample event")
+        assert test_event.start_time == "5:00 AM"
+        assert isinstance(test_event.last_updated, datetime.datetime)
+
+    def test_detail_attributes(self):
+        """Test the Events object's detail properties."""
+        test_event = Events.objects.get(event_name="Sample event")
+        assert test_event.notes == "These are some sample notes for an event."
 
     def tearDown(self):
         """Delete the test object when done."""
