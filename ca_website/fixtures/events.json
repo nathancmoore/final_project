@@ -1,0 +1,48 @@
+[
+    {
+        "model": "ca_events.Events",
+        "pk": 1,
+        "fields": {
+            "event_photo": "",
+            "event_name": "Sample Event 1",
+            "weekday": "Wednesday",
+            "start_time": "4:00 PM",
+            "end_time": "6:00 PM",
+            "location_name": "Evergreen Lanes",
+            "street": "5111 Claremont Way",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98203,
+            "room": "Conference Room",
+            "notes": "",
+            "accessiblility": true,
+            "contact_phone": "555-555-5555",
+            "published": true,
+            "event_date": "",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.Events",
+        "pk": 2,
+        "fields": {
+            "event_photo": "",
+            "event_name": "Sample Event 2",
+            "weekday": "Thursday",
+            "start_time": "5:00 PM",
+            "end_time": "7:00 PM",
+            "location_name": "My Mommy's House",
+            "street": "1234 Mommy Ln",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98203,
+            "room": "Party Zone",
+            "notes": "",
+            "accessiblility": true,
+            "contact_phone": "777-777-7777",
+            "published": true,
+            "event_date": "",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+]

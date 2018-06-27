@@ -17,8 +17,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "C, M",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
 
@@ -40,8 +40,8 @@
             "notes": "",
             "duration": 75,
             "meeting_format": "C, M",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -62,8 +62,8 @@
             "notes": "Use Alley Entrance",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -84,8 +84,8 @@
             "notes": "2nd Floor",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -106,8 +106,8 @@
             "notes": "Speaker on third Sunday of the month",
             "duration": 60,
             "meeting_format": "SB",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -128,8 +128,8 @@
             "notes": "Birthday night 4th Sunday of the month, speaker meeting 5th Sunday of the month",
             "duration": 60,
             "meeting_format": "MM",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -150,8 +150,8 @@
             "notes": "Rear building",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -172,8 +172,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "CL, LS",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -194,8 +194,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "CL, MM",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -216,8 +216,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "CL",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -238,8 +238,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -260,8 +260,8 @@
             "notes": "Speaker on second Monday of the month",
             "duration": 60,
             "meeting_format": "SB",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -282,8 +282,8 @@
             "notes": "Use Back Entrance",
             "duration": 75,
             "meeting_format": "SB",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -304,8 +304,8 @@
             "notes": "Open to non-VA members",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -326,8 +326,8 @@
             "notes": "Rear building",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -348,8 +348,8 @@
             "notes": "",
             "duration": 75,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -370,8 +370,8 @@
             "notes": "Use Alley Entrance",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -392,8 +392,8 @@
             "notes": "Use North Entrance",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -414,8 +414,8 @@
             "notes": "Pizza & Root Beer Floats on the Last Tuesday of the Month at 6:30 p.m.",
             "duration": 60,
             "meeting_format": "CL, SB",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -436,8 +436,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "LS",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -458,8 +458,8 @@
             "notes": "Rear building",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -480,8 +480,8 @@
             "notes": "Upstairs",
             "duration": 60,
             "meeting_format": "CL",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -502,8 +502,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "MM",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -524,8 +524,8 @@
             "notes": "Speaker on the First Wednesday of the Month",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -546,8 +546,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -568,8 +568,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -590,8 +590,8 @@
             "notes": "Speaker on the Third Wednesday of the Month",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -612,8 +612,8 @@
             "notes": "Rear building",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -634,8 +634,8 @@
             "notes": "Rear building",
             "duration": 60,
             "meeting_format": "C, CL, W",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -656,8 +656,8 @@
             "notes": "",
             "duration": 75,
             "meeting_format": "MM",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -678,8 +678,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -700,8 +700,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "C, NC",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -722,8 +722,8 @@
             "notes": "Pizza Night on the Last Thursday of the Month",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -744,8 +744,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -766,8 +766,8 @@
             "notes": "Use Alley Entrance, Pizza Night on the Last Thursday of the Month",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -788,8 +788,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "CL, SB",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -810,8 +810,8 @@
             "notes": "Rear building",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -832,8 +832,8 @@
             "notes": "Birthday Night on the Last Friday of the Month",
             "duration": 75,
             "meeting_format": "CL",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -854,8 +854,8 @@
             "notes": "Birthday Night on the Third Friday of the Month",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -876,8 +876,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -898,8 +898,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "C, SB",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -920,8 +920,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "MM",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -942,8 +942,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "MM",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -964,8 +964,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "W",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -986,8 +986,8 @@
             "notes": "",
             "duration": 75,
             "meeting_format": "NC, W",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -1008,8 +1008,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "CL, SB",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -1030,8 +1030,8 @@
             "notes": "",
             "duration": 75,
             "meeting_format": "CL",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -1052,8 +1052,8 @@
             "notes": "Potluck and Speaker on the Third Saturday of the Month",
             "duration": 60,
             "meeting_format": "CL, SB",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -1074,8 +1074,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "CL",
-            "accessibility": true,
-            "last_updated": ""
+            "accessibility": "true",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     },
     {
@@ -1096,8 +1096,8 @@
             "notes": "",
             "duration": 60,
             "meeting_format": "MM",
-            "accessibility": false,
-            "last_updated": ""
+            "accessibility": "false",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
         }
     }
 ]

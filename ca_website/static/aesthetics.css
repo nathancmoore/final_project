@@ -1,0 +1,176 @@
+.btn {
+    background-color: rgb(91, 195, 255);
+    display: block;
+    width: 70vw;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+body {
+    /*background-color: rgb(235, 235, 235);*/
+    background-color: #f8f9fa;
+}
+#align {
+    text-align: center;
+}
+#inlign {
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+.card-title {
+    font-size: 7vw;
+    font-weight: 360;
+}
+#border {
+    margin-bottom: 1vh;
+    border: none;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    border-color: black;
+    background-color: rgb(225, 225, 225);
+}
+.card-text {
+    font-size: 2vh;
+}
+#cawelcome {
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 400;
+}
+#cawelcome {
+    text-align: center;
+    font-size: 7vw;
+}
+nav {
+    /*height: 5rem;*/
+}
+.navbar-nav a:hover {
+    color: #B3C211!important;
+}
+.jumbotron {
+/*    border-right: 1px solid black;
+    border-left: 1px solid black;
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 2vh;
+    background-color: rgb(225, 225, 225);*/
+    padding: 1rem 13%;
+    margin: 0 2% 3rem;
+    background-color: rgb(225, 225, 225);
+}
+
+#home {
+    margin: 0 2% 3rem;
+    background-color: rgb(225, 225, 225);   
+}
+
+#banner {
+    height: 15rem;
+    width: 100%;
+    background: url("./MEDIA/Downtown_Seattle_WV_banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#home-bio {
+    margin: 0 14%;
+    padding-bottom: 1rem;
+}
+
+#bordercarousel {
+    margin-bottom: 1vh;
+    /*border: none;*/
+    /*border-top: 2px solid lightgrey;*/
+    /*border-bottom: 2px solid lightgrey;*/
+    /*border-color: black;*/
+    background-color: rgb(225, 225, 225);
+    width: 90vw;
+    margin: auto;
+    border-radius: .2em;
+}
+#verticle {
+    /*border-right: 1px solid black;*/
+    /*border-left: 1px solid black;*/
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 2vh;
+    background-color: rgb(225, 225, 225);
+}
+#aligntop {
+    text-align: center;
+    margin-top: 2vh;
+}
+.cleartop {
+    /*border-right: 1px solid black;*/
+    /*border-left: 1px solid black;*/
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(225, 225, 225);
+    border-radius: .2em;
+    text-align: center;
+}
+#content {
+    margin-top: 5.5rem;
+}
+#containerx {
+    /*border-right: 1px solid black;*/
+    /*border-left: 1px solid black;*/
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(225, 225, 225);
+    border-radius: .2em;
+    margin-top: 7vh;
+    text-align: center;
+}
+.list-group-item {
+    background-color: rgb(135, 135, 135);
+}
+footer {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 0;
+    border-bottom: 2px solid black;
+    background-color: rgb(68, 67, 67);
+    color: rgb(181, 179, 179);
+}
+.pre-footer {
+    margin-top: 5rem;
+    background-color: #cecece;
+}
+.pre-footer h4 {
+    padding-top: .5rem;
+    margin: .75rem 0 .25rem;
+}
+.pre-footer hr {
+    width: 33%;
+    margin: 0 auto;
+    background-color: black;
+}
+.pre-footer p {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+    #cawelcome {
+        font-size: 4vw;
+    }
+    #cawelcome {
+        font-size: 4vw;
+    } 
+    .card-title {
+        font-size: 4vw;
+    }  
+}
+
+@media (max-width: 500px) {
+    .pre-footer hr {
+        width: 80%;
+    }
+    #content {
+        margin-top: 7.5rem;
+    }
+}

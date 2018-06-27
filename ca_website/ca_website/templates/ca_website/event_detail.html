@@ -1,0 +1,17 @@
+{% extends 'ca_website/base.html' %}
+
+{% block content %}
+    {{ event.event_photo }}
+    {{ event.event_name }}
+    {{ event.start_time }}
+    {{ event.end_time }}
+    {{ event.location_name }}
+    {{ event.street }}
+    {{ event.suite }}
+    {{ event.city }}
+    {{ event.zip_code }}
+    {{ event.room }}
+    {{ event.notes }}
+    {{ event.event_date }}
+    {{ event.last_updated }}
+{% endblock %}
