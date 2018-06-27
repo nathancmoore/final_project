@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'castyles.css' %}">
     <link rel="stylesheet" href="{% static 'aesthetics.css' %}">
     <script src="https://use.fontawesome.com/df024f486b.js"></script>
+
   </head>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <a class="navbar-brand nospace"><img src="{% static 'calogo.gif' %}" class='navlogo'></a>
@@ -22,35 +23,41 @@
       </button>
       <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="{% url 'homepage' %}">Home<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link active" href="{% url 'about' %}">About<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link active" href="{% url 'meetings' %}">Meeting Schedule<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link active" href="{% url 'eventinfo' %}">Event Info &amp; Meeting Flyers<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link active" href="{% url 'resources' %}">Additional Resources<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'homepage' %}">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'about' %}">About<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'meetings' %}">Meeting Schedule<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'eventinfo' %}">Event Info &amp; Meeting Flyers<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'resources' %}">Additional Resources<span class="sr-only">(current)</span></a>
         </div>
       </div>
     </nav>
-
-
-    {% block content %}
-    {% endblock %}
-
-    <footer class="spiff">
-      <div>
-        <p class=contact>Contact Us <i class="fa fa-phone" aria-hidden="true"></i> (425)244-1150 <i class="fa fa-envelope" aria-hidden="true"> </i> caofwa@gmail.com</p>
-      </div>
-      <div>
-        <p class="nospace disclaimer clearfix">Cocaine Anonymous is a Fellowship of, by, and for addicts seeking recovery. Friends and family of addicts should contact Co-Anon Family Groups, a Fellowship dedicated to their much different needs.</p>
-        <p class="nospace disclaimer">Cocaine Anonymous is not affiliated with Alcoholics Anonymous or any other similar organization.</p>
-        <p class="nospace disclaimer">This site copyright 1996-2014 Cocaine Anonymous World Services, Inc. "C.A.," "Cocaine Anonymous" and the C.A. Logo are registered trademarks of Cocaine Anonymous World Services, Inc. All rights reserved.</p>
-        <p class="nospace disclaimer">This World Wide Web site (caofwa.org) is a publication of Washington State Cocaine Anonymous. All material, including, without limitation, trademarks, copyrights and all other rights, presented or included herein, including all subsidiary pages, is registered, owned and/or copyrighted by Washington State Cocaine Anonymous. Permission is granted to download and store this material for individual, non-proprietary use only. All other rights are fully reserved.</p>
-        <p class="nospace disclaimer">Some of the items contained in these pages are published with permission of C.A. World Services, Inc., but this does not imply endorsement of this web site by the C.A. World Service Conference or the C.A. World Service Office. The information provided within this web site is intended to be a convenience for those who visit our web site. Such inclusion does not constitute or imply any endorsement by, or affiliation with, the Washington State Area of Cocaine Anonymous or the Districts within the Area.</p>
-      </div>
+    <div id=content>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="pre-footer">
+        <div class="text-center">
+            <h4>Contact us</h4>
+            <hr>
+            <p>(425)244-1150 | <a href="mailto:caofwa@gmail.com">caofwa@gmail.com</a></p>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div>
+                <p class="disclaimer clearfix">
+                Cocaine Anonymous is a Fellowship of, by, and for addicts seeking recovery. Friends and family of addicts should contact Co-Anon Family Groups, a Fellowship dedicated to their much different needs.</p>
+                <p class="disclaimer">Cocaine Anonymous is not affiliated with Alcoholics Anonymous or any other similar organization.</p>
+                <p class="disclaimer">This site copyright 1996-2014 Cocaine Anonymous World Services, Inc. "C.A.," "Cocaine Anonymous" and the C.A. Logo are registered trademarks of Cocaine Anonymous World Services, Inc. All rights reserved.</p>
+                <p class="disclaimer">This World Wide Web site (caofwa.org) is a publication of Washington State Cocaine Anonymous. All material, including, without limitation, trademarks, copyrights and all other rights, presented or included herein, including all subsidiary pages, is registered, owned and/or copyrighted by Washington State Cocaine Anonymous. Permission is granted to download and store this material for individual, non-proprietary use only. All other rights are fully reserved.</p>
+                <p class="disclaimer">Some of the items contained in these pages are published with permission of C.A. World Services, Inc., but this does not imply endorsement of this web site by the C.A. World Service Conference or the C.A. World Service Office. The information provided within this web site is intended to be a convenience for those who visit our web site. Such inclusion does not constitute or imply any endorsement by, or affiliation with, the Washington State Area of Cocaine Anonymous or the Districts within the Area.</p>
+            </div>
+        </div>
     </footer>
 
 
-    <script src="{% static 'popper.js' %}"></script>
     <script type="text/javascript" src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'popper.js' %}"></script>
     <script src="{% static 'bootstrap.min.js' %}"></script>
   </body>
 </html>
