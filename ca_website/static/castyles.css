@@ -1,0 +1,76 @@
+.test{
+    background-color: green;
+}
+
+.logo{
+    width: 50%;
+}
+
+.canav{
+    padding: 0px;
+}
+
+.navbtn{
+    font-size: 1em;
+}
+
+.navlogo{
+    width: 2.5em;
+}
+
+.nospace{
+    margin: 0px;
+    padding: 0px;
+}
+
+.motto{
+    width: 18em;
+    font-size: .75em;
+    font-style: italic;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+}
+
+.disclaimer{
+    font-size: .5em;
+    margin-bottom: .35rem;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.event_image{
+    padding: 0.25rem 0;
+    height: 70%;
+}
+.center{
+    text-align: center;
+}
+
+.fixed-top {
+    border-bottom: #808080 thin solid;
+}
+
+.carousel {
+    margin: auto;
+}
+
+#bordercarousel .row {
+
+}
+
+
+
+.carousel-item img {
+    max-height: 36rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.flyer {
+    height: 25rem;
+}

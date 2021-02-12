@@ -1,0 +1,104 @@
+[
+    {
+        "model": "ca_events.ServiceMeeting",
+        "pk": 1,
+        "fields": {
+            "meeting_name": "Area Business Meeting",
+            "meeting_day": "2nd Sunday of the Month",
+            "start_time": "4:00 PM",
+            "location_name": "Evergreen Lanes",
+            "street": "5111 Claremont Way",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98203,
+            "room": "Conference Room",
+            "notes": "",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.ServiceMeeting",
+        "pk": 2,
+        "fields": {
+            "meeting_name": "District 1 Business Meeting",
+            "meeting_day": "4th Sunday of the Month",
+            "start_time": "6:00 PM",
+            "location_name": "Mount Vernon Senior Center",
+            "street": "1401 Cleveland Ave",
+            "suite": "",
+            "city": "Mount Vernon",
+            "zip_code": 98273,
+            "room": "",
+            "notes": "",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.ServiceMeeting",
+        "pk": 3,
+        "fields": {
+            "meeting_name": "District 2 Business Meeting",
+            "meeting_day": "2nd Wednesday of the Month",
+            "start_time": "7:00 PM",
+            "location_name": "Evergreen Lanes",
+            "street": "5111 Claremont Way",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98203,
+            "room": "Conference Room",
+            "notes": "",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.ServiceMeeting",
+        "pk": 4,
+        "fields": {
+            "meeting_name": "District 2 Hospitals & Institutions Committee Meeting",
+            "meeting_day": "1st Sunday of the Month",
+            "start_time": "11:30 AM",
+            "location_name": "Evergreen Lanes",
+            "street": "5111 Claremont Way",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98203,
+            "room": "Conference Room",
+            "notes": "",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.ServiceMeeting",
+        "pk": 5,
+        "fields": {
+            "meeting_name": "District 3 Business Meeting",
+            "meeting_day": "3rd Tuesday of the Month",
+            "start_time": "11:30 AM",
+            "location_name": "Alano Club of the Eastside",
+            "street": "12302 NE 8th St",
+            "suite": "",
+            "city": "Everett",
+            "zip_code": 98005,
+            "room": "Members' Room",
+            "notes": "",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    },
+    {
+        "model": "ca_events.ServiceMeeting",
+        "pk": 6,
+        "fields": {
+            "meeting_name": "District 3 Hospitals & Institutions Committee Meeting",
+            "meeting_day": "2nd Sunday of the Month",
+            "start_time": "10:00 AM",
+            "location_name": "Starbucks",
+            "street": "9721 NE 119th Way",
+            "suite": "",
+            "city": "Kirkland",
+            "zip_code": 98034,
+            "room": "",
+            "notes": "TEMPORARY LOCATION",
+            "last_updated": "2017-12-19 16:34:12.147469-05"
+        }
+    }
+]
